@@ -114,7 +114,7 @@
             top: 100%;
             left: 0;
             background: white;
-            min-width: 220px;
+            min-width: 240px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-radius: 12px;
             padding: 10px 0;
@@ -149,32 +149,29 @@
 
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
                 <a href="#" class="hover:text-white transition-colors">Home</a>
+                <a href="#" class="hover:text-white transition-colors">About Us</a>
+                
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
-                    <span class="group-hover:text-white transition-colors flex items-center gap-1">Treatments <i class="ri-arrow-down-s-line"></i></span>
+                    <span class="group-hover:text-white transition-colors flex items-center gap-1">Services <i class="ri-arrow-down-s-line"></i></span>
                     <div class="dropdown-menu">
-                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Heart Failure</a>
-                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Angina (Chest Pain)</a>
-                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Coronary Artery Disease</a>
-                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Post-Bypass Recovery</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">EECP Treatment</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Cholesterol Reversal</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Hypertension Reversal</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Diabetes Reversal</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Weight Management</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Ayurvedic Therapy</a>
                     </div>
                 </div>
+
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
                     <span class="group-hover:text-white transition-colors flex items-center gap-1">Know EECP <i class="ri-arrow-down-s-line"></i></span>
                     <div class="dropdown-menu">
                         <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">What is EECP?</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">How it Works</a>
                         <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Scientific Evidence</a>
                         <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">FDA Approval</a>
                     </div>
                 </div>
-                <div class="relative dropdown group h-full py-4 cursor-pointer">
-                    <span class="group-hover:text-white transition-colors flex items-center gap-1">Wellness <i class="ri-arrow-down-s-line"></i></span>
-                    <div class="dropdown-menu">
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Diabetes Reversal</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Blood Pressure Control</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Weight Management</a>
-                    </div>
-                </div>
+                
                 <a href="#book-section" class="bg-white text-brand-navy px-5 py-2 rounded-full font-bold hover:bg-slate-200 transition-all">Book Trial</a>
             </div>
             <button class="md:hidden text-white text-2xl"><i class="ri-menu-4-line"></i></button>
@@ -212,74 +209,102 @@
     <section id="services" class="py-16 px-6 bg-white relative z-20 -mt-10 rounded-t-3xl">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-navy">Our Specialized Treatments</h2>
-                <p class="text-slate-500">Select a condition to book your specialized consultation.</p>
+                <h2 class="text-3xl font-bold text-brand-navy">Our Specialized Programs</h2>
+                <p class="text-slate-500">Comprehensive, non-invasive solutions for your heart health.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="group relative h-96 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070&auto=format&fit=crop');"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1579684385180-1ea678bc0b98?q=80&w=2070&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent opacity-90 transition-opacity duration-500"></div>
-                    
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
                             <i class="ri-heart-pulse-fill text-4xl text-red-400 mb-3 block"></i>
-                            <h3 class="text-2xl font-bold mb-2">Heart Failure</h3>
-                            <p class="text-sm text-slate-300 mb-4 opacity-90">Improve heart pumping capacity (LVEF) and reduce breathlessness without surgery.</p>
+                            <h3 class="text-2xl font-bold mb-2">EECP Treatment</h3>
+                            <p class="text-sm text-slate-300 mb-4 opacity-90">The "Natural Bypass" therapy. Improve heart function and circulation without surgery.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Heart%20Failure%20treatment" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold font-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20EECP%20Treatment" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
                             Book Consultation
                         </a>
                     </div>
                 </div>
 
-                <div class="group relative h-96 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent opacity-90 transition-opacity duration-500"></div>
-                    
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-fire-fill text-4xl text-orange-400 mb-3 block"></i>
-                            <h3 class="text-2xl font-bold mb-2">Angina Pain</h3>
-                            <p class="text-sm text-slate-300 mb-4 opacity-90">Eliminate chest pain, heaviness, and reduce dependency on Nitrate medications.</p>
+                            <i class="ri-drop-fill text-4xl text-yellow-400 mb-3 block"></i>
+                            <h3 class="text-2xl font-bold mb-2">Cholesterol Reversal</h3>
+                            <p class="text-sm text-slate-300 mb-4 opacity-90">Scientifically designed programs to lower bad cholesterol and clear arterial plaque naturally.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Angina%20treatment" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold font-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Cholesterol%20Reversal" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
                             Book Consultation
                         </a>
                     </div>
                 </div>
 
-                <div class="group relative h-96 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop');"></div>
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent opacity-90 transition-opacity duration-500"></div>
-                    
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-flow-chart text-4xl text-blue-400 mb-3 block"></i>
-                            <h3 class="text-2xl font-bold mb-2">Artery Blockage</h3>
-                            <p class="text-sm text-slate-300 mb-4 opacity-90">Create natural bypass channels around blocked arteries. No stents needed.</p>
+                            <i class="ri-speed-up-fill text-4xl text-blue-400 mb-3 block"></i>
+                            <h3 class="text-2xl font-bold mb-2">Hypertension Reversal</h3>
+                            <p class="text-sm text-slate-300 mb-4 opacity-90">Normalize your blood pressure levels and protect your kidneys and heart from damage.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Blockage%20treatment" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold font-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Hypertension%20Reversal" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
                             Book Consultation
                         </a>
                     </div>
                 </div>
 
-                <div class="group relative h-96 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop');"></div>
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent opacity-90 transition-opacity duration-500"></div>
-                    
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
                             <i class="ri-leaf-fill text-4xl text-green-400 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">Diabetes Reversal</h3>
-                            <p class="text-sm text-slate-300 mb-4 opacity-90">Holistic management to control sugar levels and protect your heart health.</p>
+                            <p class="text-sm text-slate-300 mb-4 opacity-90">Manage and reverse Type 2 Diabetes through targeted nutrition and lifestyle changes.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Diabetes%20Reversal" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold font-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Diabetes%20Reversal" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
                             Book Consultation
                         </a>
                     </div>
                 </div>
+
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent opacity-90 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
+                            <i class="ri-scales-3-fill text-4xl text-orange-400 mb-3 block"></i>
+                            <h3 class="text-2xl font-bold mb-2">Weight Management</h3>
+                            <p class="text-sm text-slate-300 mb-4 opacity-90">Achieve your ideal BMI to reduce strain on your heart and joints.</p>
+                        </div>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Weight%20Management" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent opacity-90 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
+                            <i class="ri-plant-fill text-4xl text-emerald-400 mb-3 block"></i>
+                            <h3 class="text-2xl font-bold mb-2">Ayurvedic Therapy</h3>
+                            <p class="text-sm text-slate-300 mb-4 opacity-90">Complementary holistic treatments to detoxify and rejuvenate the cardiovascular system.</p>
+                        </div>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Ayurvedic%20Therapy" target="_blank" class="block w-full bg-white text-brand-navy text-center py-3 rounded-xl font-bold text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-200">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
