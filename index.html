@@ -110,7 +110,7 @@
             background-position: center;
         }
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(10, 61, 38, 0.8) 0%, rgba(11, 17, 32, 0.8) 100%);
+            background: rgba(255, 255, 255, 0.8); /* Made overlay lighter */
         }
 
         /* Dropdown Menu */
@@ -207,26 +207,26 @@
     <header id="hero-slider" class="hero-bg relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32">
-            <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/10 text-slate-200 text-xs font-semibold mb-8 border border-white/20 backdrop-blur-md">
-                <i class="ri-verified-badge-fill text-green-400"></i> Under the Care of Dr. Neelam S. Pingle
+            <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-brand-green-dark/10 text-brand-green-dark text-xs font-semibold mb-8 border border-brand-green-dark/20 backdrop-blur-md">
+                <i class="ri-verified-badge-fill text-brand-green-dark"></i> Under the Care of Dr. Neelam S. Pingle
             </span>
-            <h1 id="slider-title" class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-white animate-fade-in">
+            <h1 id="slider-title" class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-brand-navy animate-fade-in">
                 Revitalize Your Heart.<br />
-                <span class="silver-text">No Surgery Required.</span>
+                <span class="text-brand-green-dark">No Surgery Required.</span>
             </h1>
-            <p id="slider-desc" class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light leading-relaxed animate-fade-in">
+            <p id="slider-desc" class="text-lg md:text-xl text-slate-700 mb-10 max-w-2xl font-light leading-relaxed animate-fade-in">
                 Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays.
             </p>
             <div class="flex flex-col md:flex-row gap-5 items-start">
-                <a href="#book-section" class="w-full md:w-auto bg-white text-brand-green-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all flex items-center justify-center gap-2 shadow-xl shadow-white/10">
+                <a href="#book-section" class="w-full md:w-auto bg-brand-green-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-green-light transition-all flex items-center justify-center gap-2 shadow-xl">
                     Start Your Assessment <i class="ri-arrow-right-line"></i>
                 </a>
                 <div class="flex gap-2 mt-4 md:mt-4">
-                    <div class="h-1 w-8 bg-white/40 rounded-full cursor-pointer hover:bg-white transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-white/40 rounded-full cursor-pointer hover:bg-white transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-white/40 rounded-full cursor-pointer hover:bg-white transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-white/40 rounded-full cursor-pointer hover:bg-white transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-white/40 rounded-full cursor-pointer hover:bg-white transition-all slider-dot"></div>
+                    <div class="h-1 w-8 bg-brand-navy/40 rounded-full cursor-pointer hover:bg-brand-navy transition-all slider-dot"></div>
+                    <div class="h-1 w-8 bg-brand-navy/40 rounded-full cursor-pointer hover:bg-brand-navy transition-all slider-dot"></div>
+                    <div class="h-1 w-8 bg-brand-navy/40 rounded-full cursor-pointer hover:bg-brand-navy transition-all slider-dot"></div>
+                    <div class="h-1 w-8 bg-brand-navy/40 rounded-full cursor-pointer hover:bg-brand-navy transition-all slider-dot"></div>
+                    <div class="h-1 w-8 bg-brand-navy/40 rounded-full cursor-pointer hover:bg-brand-navy transition-all slider-dot"></div>
                 </div>
             </div>
         </div>
@@ -241,75 +241,75 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?q=80&w=2072&auto=format&fit=crop');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/70 to-transparent opacity-95 transition-opacity duration-500"></div>
-                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-white/70 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-heart-pulse-fill text-4xl text-red-400 mb-3 block"></i>
+                            <i class="ri-heart-pulse-fill text-4xl text-red-500 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">EECP Treatment</h3>
-                            <p class="text-sm text-slate-200 mb-4 opacity-90">The "Natural Bypass" therapy. Improve heart function and circulation without surgery.</p>
+                            <p class="text-sm text-slate-700 mb-4 opacity-90">The "Natural Bypass" therapy. Improve heart function and circulation without surgery.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20EECP%20Treatment" target="_blank" class="block w-full bg-white text-brand-green-dark text-center py-3 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors shadow-lg">Book Consultation</a>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20EECP%20Treatment" target="_blank" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</a>
                     </div>
                 </div>
                 <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/70 to-transparent opacity-95 transition-opacity duration-500"></div>
-                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-white/70 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-drop-fill text-4xl text-yellow-400 mb-3 block"></i>
+                            <i class="ri-drop-fill text-4xl text-yellow-500 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">Cholesterol Reversal</h3>
-                            <p class="text-sm text-slate-200 mb-4 opacity-90">Scientifically designed programs to lower bad cholesterol and clear arterial plaque naturally.</p>
+                            <p class="text-sm text-slate-700 mb-4 opacity-90">Scientifically designed programs to lower bad cholesterol and clear arterial plaque naturally.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Cholesterol%20Reversal" target="_blank" class="block w-full bg-white text-brand-green-dark text-center py-3 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors shadow-lg">Book Consultation</a>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Cholesterol%20Reversal" target="_blank" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</a>
                     </div>
                 </div>
                 <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/70 to-transparent opacity-95 transition-opacity duration-500"></div>
-                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-white/70 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-speed-up-fill text-4xl text-blue-400 mb-3 block"></i>
+                            <i class="ri-speed-up-fill text-4xl text-blue-500 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">Hypertension Reversal</h3>
-                            <p class="text-sm text-slate-200 mb-4 opacity-90">Normalize your blood pressure levels and protect your kidneys and heart from damage.</p>
+                            <p class="text-sm text-slate-700 mb-4 opacity-90">Normalize your blood pressure levels and protect your kidneys and heart from damage.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Hypertension%20Reversal" target="_blank" class="block w-full bg-white text-brand-green-dark text-center py-3 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors shadow-lg">Book Consultation</a>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Hypertension%20Reversal" target="_blank" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</a>
                     </div>
                 </div>
                 <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/70 to-transparent opacity-95 transition-opacity duration-500"></div>
-                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-white/70 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-leaf-fill text-4xl text-green-400 mb-3 block"></i>
+                            <i class="ri-leaf-fill text-4xl text-green-500 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">Diabetes Reversal</h3>
-                            <p class="text-sm text-slate-200 mb-4 opacity-90">Manage and reverse Type 2 Diabetes through targeted nutrition and lifestyle changes.</p>
+                            <p class="text-sm text-slate-700 mb-4 opacity-90">Manage and reverse Type 2 Diabetes through targeted nutrition and lifestyle changes.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Diabetes%20Reversal" target="_blank" class="block w-full bg-white text-brand-green-dark text-center py-3 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors shadow-lg">Book Consultation</a>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Diabetes%20Reversal" target="_blank" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</a>
                     </div>
                 </div>
                 <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/70 to-transparent opacity-95 transition-opacity duration-500"></div>
-                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-white/70 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-scales-3-fill text-4xl text-orange-400 mb-3 block"></i>
+                            <i class="ri-scales-3-fill text-4xl text-orange-500 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">Weight Management</h3>
-                            <p class="text-sm text-slate-200 mb-4 opacity-90">Achieve your ideal BMI to reduce strain on your heart and joints.</p>
+                            <p class="text-sm text-slate-700 mb-4 opacity-90">Achieve your ideal BMI to reduce strain on your heart and joints.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Weight%20Management" target="_blank" class="block w-full bg-white text-brand-green-dark text-center py-3 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors shadow-lg">Book Consultation</a>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Weight%20Management" target="_blank" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</a>
                     </div>
                 </div>
                 <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark via-brand-green-dark/70 to-transparent opacity-95 transition-opacity duration-500"></div>
-                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                    <div class="absolute inset-0 bg-white/70 transition-opacity duration-500"></div>
+                    <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
                         <div class="transform transition-transform duration-500 group-hover:-translate-y-2">
-                            <i class="ri-plant-fill text-4xl text-emerald-400 mb-3 block"></i>
+                            <i class="ri-plant-fill text-4xl text-emerald-500 mb-3 block"></i>
                             <h3 class="text-2xl font-bold mb-2">Ayurvedic Therapy</h3>
-                            <p class="text-sm text-slate-200 mb-4 opacity-90">Complementary holistic treatments to detoxify and rejuvenate the cardiovascular system.</p>
+                            <p class="text-sm text-slate-700 mb-4 opacity-90">Complementary holistic treatments to detoxify and rejuvenate the cardiovascular system.</p>
                         </div>
-                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Ayurvedic%20Therapy" target="_blank" class="block w-full bg-white text-brand-green-dark text-center py-3 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors shadow-lg">Book Consultation</a>
+                        <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20Ayurvedic%20Therapy" target="_blank" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</a>
                     </div>
                 </div>
             </div>
@@ -530,11 +530,11 @@
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
 
         const slides = [
-            { img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='silver-text'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
-            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='silver-text'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
-            { img: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?q=80&w=2072&auto=format&fit=crop", title: "Zero Hospitalization.<br><span class='silver-text'>100% Non-Invasive.</span>", desc: "Walk in, relax for an hour, and walk out. No downtime, no anesthesia, just a healthier heart." },
-            { img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop", title: "Restore Blood Flow.<br><span class='silver-text'>Reclaim Your Life.</span>", desc: "Get back to doing what you love. Improve your stamina, energy levels, and overall quality of life." },
-            { img: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?q=80&w=2070&auto=format&fit=crop", title: "World-Class<br><span class='silver-text'>Cardiac Care in Bhandup.</span>", desc: "Led by Dr. Neelam S. Pingle, Silver Star Heart Foundation brings global standards of non-surgical care to your neighborhood." }
+            { img: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?q=80&w=2072&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='text-brand-green-dark'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
+            { img: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='text-brand-green-dark'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
+            { img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop", title: "Zero Hospitalization.<br><span class='text-brand-green-dark'>100% Non-Invasive.</span>", desc: "Walk in, relax for an hour, and walk out. No downtime, no anesthesia, just a healthier heart." },
+            { img: "https://images.unsplash.com/photo-1579684385180-1ea678bc0b98?q=80&w=2070&auto=format&fit=crop", title: "Restore Blood Flow.<br><span class='text-brand-green-dark'>Reclaim Your Life.</span>", desc: "Get back to doing what you love. Improve your stamina, energy levels, and overall quality of life." },
+            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "World-Class<br><span class='text-brand-green-dark'>Cardiac Care in Bhandup.</span>", desc: "Led by Dr. Neelam S. Pingle, Silver Star Heart Foundation brings global standards of non-surgical care to your neighborhood." }
         ];
 
         let currentSlide = 0;
