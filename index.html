@@ -50,6 +50,14 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
+        /* Silver Text Glow Effect */
+        .silver-text {
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
         /* Premium Dark Green Textured Background */
         .premium-green-bg {
             background: linear-gradient(135deg, #0a3d26 0%, #062c1b 100%);
@@ -59,7 +67,7 @@
 
         .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
-        /* Floating Social Bar */
+        /* Floating Social Bar - Mobile Optimized */
         .social-floater {
             position: fixed;
             right: 15px;
@@ -86,6 +94,7 @@
             backdrop-filter: blur(5px);
         }
 
+        /* Desktop sizes for social icons */
         @media (min-width: 768px) {
             .social-floater { right: 30px; bottom: 40px; gap: 15px; }
             .social-btn { width: 50px; height: 50px; font-size: 1.5rem; }
@@ -95,7 +104,7 @@
 
         /* Simmering WhatsApp */
         .whatsapp-simmer {
-            width: 50px;
+            width: 50px; /* Adjusted size */
             height: 50px;
             background: #25D366;
             font-size: 26px;
@@ -117,6 +126,7 @@
             background-position: center;
         }
         .hero-overlay {
+            /* Strong White Overlay for Readability */
             background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.6) 100%);
         }
 
@@ -142,12 +152,12 @@
             transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
             max-height: 0;
             opacity: 0;
-            overflow: hidden;
-            background: #0a3d26;
+            overflow-y: auto; /* Allow scrolling if menu is long */
+            background: #0a3d26; /* Matches Header Green */
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         #mobile-menu.open {
-            max-height: 100vh;
+            max-height: 90vh;
             opacity: 1;
         }
 
@@ -244,21 +254,33 @@
         </div>
 
         <div id="mobile-menu" class="md:hidden">
-            <div class="px-6 py-6 flex flex-col gap-4 text-white text-sm">
-                <a href="#" onclick="toggleMobileMenu()" class="text-base font-bold">Home</a>
-                <a href="#about" onclick="toggleMobileMenu()" class="text-base font-bold">About Us</a>
-                <a href="#gallery" onclick="toggleMobileMenu()" class="text-base font-bold">Gallery</a>
+            <div class="px-6 py-6 flex flex-col gap-5 text-white text-sm">
+                <a href="#" onclick="toggleMobileMenu()" class="text-base font-medium border-b border-white/10 pb-2">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-base font-medium border-b border-white/10 pb-2">About Us</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="text-base font-medium border-b border-white/10 pb-2">Gallery</a>
                 
-                <div class="font-bold text-green-300 mt-2 uppercase tracking-widest text-xs">Our Services</div>
-                <button onclick="scrollToService('service-eecp'); toggleMobileMenu()" class="text-left pl-4 py-1">EECP Treatment</button>
-                <button onclick="scrollToService('service-cholesterol'); toggleMobileMenu()" class="text-left pl-4 py-1">Cholesterol Reversal</button>
-                <button onclick="scrollToService('service-diabetes'); toggleMobileMenu()" class="text-left pl-4 py-1">Diabetes Reversal</button>
+                <div>
+                    <div class="font-bold text-green-300 mb-2 uppercase tracking-widest text-xs">Our Services</div>
+                    <div class="flex flex-col gap-2 pl-4 border-l-2 border-white/20">
+                        <button onclick="scrollToService('service-eecp'); toggleMobileMenu()" class="text-left text-green-50">EECP Treatment</button>
+                        <button onclick="scrollToService('service-cholesterol'); toggleMobileMenu()" class="text-left text-green-50">Cholesterol Reversal</button>
+                        <button onclick="scrollToService('service-hypertension'); toggleMobileMenu()" class="text-left text-green-50">Hypertension Reversal</button>
+                        <button onclick="scrollToService('service-diabetes'); toggleMobileMenu()" class="text-left text-green-50">Diabetes Reversal</button>
+                        <button onclick="scrollToService('service-weight'); toggleMobileMenu()" class="text-left text-green-50">Weight Management</button>
+                        <button onclick="scrollToService('service-ayurveda'); toggleMobileMenu()" class="text-left text-green-50">Ayurvedic Therapy</button>
+                    </div>
+                </div>
                 
-                <div class="font-bold text-green-300 mt-2 uppercase tracking-widest text-xs">Information</div>
-                <a href="#" onclick="openPage('page-what'); toggleMobileMenu()" class="pl-4 py-1 block">What is EECP?</a>
-                <a href="#" onclick="openPage('page-process'); toggleMobileMenu()" class="pl-4 py-1 block">Scientific Evidence</a>
+                <div>
+                    <div class="font-bold text-green-300 mb-2 uppercase tracking-widest text-xs">Know EECP</div>
+                    <div class="flex flex-col gap-2 pl-4 border-l-2 border-white/20">
+                        <a href="#" onclick="openPage('page-what'); toggleMobileMenu()" class="text-green-50">What is EECP?</a>
+                        <a href="#" onclick="openPage('page-process'); toggleMobileMenu()" class="text-green-50">Scientific Evidence</a>
+                        <a href="#" onclick="openPage('page-fda'); toggleMobileMenu()" class="text-green-50">FDA Approval</a>
+                    </div>
+                </div>
                 
-                <button onclick="bookService('General Enquiry'); toggleMobileMenu()" class="bg-white text-brand-green-dark px-5 py-3 rounded-xl font-bold mt-4 text-center w-full">Book Appointment</button>
+                <button onclick="bookService('General Enquiry'); toggleMobileMenu()" class="bg-white text-brand-green-dark px-5 py-3 rounded-xl font-bold mt-2 text-center w-full shadow-lg">Book Appointment</button>
             </div>
         </div>
     </nav>
@@ -445,13 +467,6 @@
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">Enhanced External Counterpulsation (EECP) is a non-invasive treatment that acts as a "Natural Bypass" for your heart.</p>
                 <p>Unlike Bypass surgery (which uses veins from your leg) or Angioplasty (which uses metal stents), EECP uses your body's own natural ability to heal. It works by increasing the flow of blood to your heart muscle, encouraging the formation of new, small blood vessels (collaterals) around blocked arteries.</p>
-                <h3>The Mechanism</h3>
-                <p>Think of it as a "second heart" pumping for you. You lie on a bed, and cuffs are wrapped around your legs. These cuffs inflate and deflate in perfect rhythm with your heartbeat.</p>
-                <ul>
-                    <li><strong>During Relaxation (Diastole):</strong> The cuffs inflate, pushing oxygen-rich blood back to your heart.</li>
-                    <li><strong>During Pumping (Systole):</strong> The cuffs deflate instantly, making it easier for your heart to pump blood to the rest of the body.</li>
-                </ul>
-                <p>This process reduces the workload on your heart while feeding it more oxygen than it could get on its own.</p>
             </div>
         </div>
         <footer class="premium-green-bg text-green-100 py-16 px-6 border-t border-white/10 text-center">
@@ -484,12 +499,6 @@
             <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The Science Behind the Cure</h1>
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">EECP is not magic; it is pure physiology. It works on the principle of Angiogenesis and Hemodynamics.</p>
-                <h3>Key Physiological Changes</h3>
-                <ul>
-                    <li><strong>Shear Stress:</strong> The increased blood flow velocity creates "shear stress" on the artery walls. This stimulates the release of Nitric Oxide (NO).</li>
-                    <li><strong>Nitric Oxide Release:</strong> NO is a powerful vasodilator. It helps open up dormant blood vessels and makes arteries more elastic.</li>
-                    <li><strong>Collateral Recruitment:</strong> High pressure opens up tiny "backup" vessels that were previously closed, creating a natural bypass around the blockage.</li>
-                </ul>
                 <p>Clinical studies have shown that 80-90% of patients experience a significant reduction in angina (chest pain) and an improvement in exercise tolerance that can last for years.</p>
             </div>
         </div>
@@ -523,12 +532,6 @@
             <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">FDA Approval & Global Recognition</h1>
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">EECP is a globally recognized, FDA-cleared therapy used in leading heart institutes worldwide.</p>
-                <h3>Regulatory Status</h3>
-                <ul>
-                    <li><strong>US FDA:</strong> In 1995, the US Food and Drug Administration cleared EECP for the treatment of Angina Pectoris. In 2002, it was cleared for Heart Failure.</li>
-                    <li><strong>American Heart Association (AHA):</strong> EECP is included in the AHA/ACC guidelines for the management of patients with stable angina.</li>
-                    <li><strong>European Society of Cardiology (ESC):</strong> The ESC guidelines recommend EECP for refractory angina.</li>
-                </ul>
                 <p>Top hospitals like the <strong>Mayo Clinic</strong>, <strong>Cleveland Clinic</strong>, and <strong>Johns Hopkins</strong> in the USA have dedicated EECP centers. Silver Star Heart Foundation is proud to bring this gold-standard therapy to you.</p>
             </div>
         </div>
@@ -643,7 +646,7 @@
                             <h4 class="text-white font-bold text-lg mb-2">Clinic Address</h4>
                             <p class="text-white text-sm leading-relaxed font-medium">
                                 Silver Star Heart Foundation and Healthcare Trust,<br>
-                                Near BJP Office, Sahyadri Nagar,<br>
+                                Near BJP office, Sahyadri Nagar,<br>
                                 Kaju Tekdi, Bhandup West,<br>
                                 Mumbai, Maharashtra 400078
                             </p>
@@ -716,7 +719,6 @@
         updateSlide();
         setInterval(updateSlide, 5000);
 
-        // Page Logic
         function openPage(id) {
             document.getElementById(id).classList.add('active');
             document.body.style.overflow = 'hidden'; 
@@ -726,28 +728,22 @@
             document.body.style.overflow = 'auto'; 
         }
 
-        // SCROLL TO SERVICE WITH HIGHLIGHT
         function scrollToService(id) {
             const element = document.getElementById(id);
             if(element) {
-                // Scroll
                 element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                // Highlight
                 element.classList.add('highlight-card');
-                // Remove highlight after animation (2s)
                 setTimeout(() => {
                     element.classList.remove('highlight-card');
                 }, 2000);
             }
         }
 
-        // SCROLL AND SELECT SERVICE
         function bookService(serviceName) {
             document.getElementById('book-section').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('p_treatment').value = serviceName;
         }
 
-        // SMART WHATSAPP FORM LOGIC
         function sendToWhatsapp(e) {
             e.preventDefault();
             let name = document.getElementById('p_name').value;
@@ -762,7 +758,6 @@
             window.open(`https://wa.me/917039196489?text=${message}`, '_blank');
         }
 
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('open');
