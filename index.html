@@ -50,6 +50,14 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
+        /* Silver Text Glow Effect */
+        .silver-text {
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
         /* Premium Dark Green Textured Background */
         .premium-green-bg {
             background: linear-gradient(135deg, #0a3d26 0%, #062c1b 100%);
@@ -102,8 +110,8 @@
             background-position: center;
         }
         .hero-overlay {
-            /* STRONG WHITE GRADIENT OVERLAY for High Contrast Text */
-            background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.6) 100%);
+            /* Strong White Overlay for Readability */
+            background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.4) 100%);
         }
 
         /* Dropdown Menu */
@@ -123,7 +131,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Smart Information Page (Full Screen Overlay) */
+        /* Smart Information Page */
         .info-page {
             position: fixed;
             inset: 0;
@@ -141,13 +149,6 @@
         .info-content h3 { font-size: 1.5rem; font-weight: 700; color: #0a3d26; margin-top: 2rem; margin-bottom: 1rem; }
         .info-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #475569; }
         .info-content li { margin-bottom: 0.5rem; }
-        
-        /* Custom Radio Button */
-        input[type="radio"] {
-            accent-color: #0a3d26;
-            width: 1.2rem;
-            height: 1.2rem;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -217,7 +218,7 @@
                 <span class="text-brand-green-dark">No Surgery Required.</span>
             </h1>
             
-            <p id="slider-desc" class="text-lg md:text-xl text-slate-800 mb-10 max-w-2xl font-bold leading-relaxed animate-fade-in">
+            <p id="slider-desc" class="text-lg md:text-xl text-slate-800 mb-10 max-w-2xl font-medium leading-relaxed animate-fade-in">
                 Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays.
             </p>
             
@@ -342,13 +343,6 @@
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">Enhanced External Counterpulsation (EECP) is a non-invasive treatment that acts as a "Natural Bypass" for your heart.</p>
                 <p>Unlike Bypass surgery (which uses veins from your leg) or Angioplasty (which uses metal stents), EECP uses your body's own natural ability to heal. It works by increasing the flow of blood to your heart muscle, encouraging the formation of new, small blood vessels (collaterals) around blocked arteries.</p>
-                <h3>The Mechanism</h3>
-                <p>Think of it as a "second heart" pumping for you. You lie on a bed, and cuffs are wrapped around your legs. These cuffs inflate and deflate in perfect rhythm with your heartbeat.</p>
-                <ul>
-                    <li><strong>During Relaxation (Diastole):</strong> The cuffs inflate, pushing oxygen-rich blood back to your heart.</li>
-                    <li><strong>During Pumping (Systole):</strong> The cuffs deflate instantly, making it easier for your heart to pump blood to the rest of the body.</li>
-                </ul>
-                <p>This process reduces the workload on your heart while feeding it more oxygen than it could get on its own.</p>
             </div>
         </div>
         <footer class="premium-green-bg text-green-100 py-16 px-6 border-t border-white/10 text-center">
@@ -381,12 +375,6 @@
             <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The Science Behind the Cure</h1>
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">EECP is not magic; it is pure physiology. It works on the principle of Angiogenesis and Hemodynamics.</p>
-                <h3>Key Physiological Changes</h3>
-                <ul>
-                    <li><strong>Shear Stress:</strong> The increased blood flow velocity creates "shear stress" on the artery walls. This stimulates the release of Nitric Oxide (NO).</li>
-                    <li><strong>Nitric Oxide Release:</strong> NO is a powerful vasodilator. It helps open up dormant blood vessels and makes arteries more elastic.</li>
-                    <li><strong>Collateral Recruitment:</strong> High pressure opens up tiny "backup" vessels that were previously closed, creating a natural bypass around the blockage.</li>
-                </ul>
                 <p>Clinical studies have shown that 80-90% of patients experience a significant reduction in angina (chest pain) and an improvement in exercise tolerance that can last for years.</p>
             </div>
         </div>
@@ -420,12 +408,6 @@
             <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">FDA Approval & Global Recognition</h1>
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">EECP is a globally recognized, FDA-cleared therapy used in leading heart institutes worldwide.</p>
-                <h3>Regulatory Status</h3>
-                <ul>
-                    <li><strong>US FDA:</strong> In 1995, the US Food and Drug Administration cleared EECP for the treatment of Angina Pectoris. In 2002, it was cleared for Heart Failure.</li>
-                    <li><strong>American Heart Association (AHA):</strong> EECP is included in the AHA/ACC guidelines for the management of patients with stable angina.</li>
-                    <li><strong>European Society of Cardiology (ESC):</strong> The ESC guidelines recommend EECP for refractory angina.</li>
-                </ul>
                 <p>Top hospitals like the <strong>Mayo Clinic</strong>, <strong>Cleveland Clinic</strong>, and <strong>Johns Hopkins</strong> in the USA have dedicated EECP centers. Silver Star Heart Foundation is proud to bring this gold-standard therapy to you.</p>
             </div>
         </div>
@@ -450,10 +432,6 @@
                     <p class="text-slate-600 mb-6 text-lg leading-relaxed font-light">
                         An accomplished and highly respected doctor with years of experience. Dr. Pingle is a trusted name in the medical community, dedicated to compassionate, non-invasive cardiac care.
                     </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center text-slate-700 font-medium"><i class="ri-checkbox-circle-fill text-brand-green-dark text-xl mr-3"></i> Expertise in Diagnosing Complex Conditions</li>
-                        <li class="flex items-center text-slate-700 font-medium"><i class="ri-checkbox-circle-fill text-brand-green-dark text-xl mr-3"></i> Helping Patients Achieve Optimal Wellness</li>
-                    </ul>
                 </div>
                 <div class="flex-1 w-full" data-aos="fade-left">
                     <div class="relative bg-gradient-to-b from-green-50 to-white rounded-[2rem] p-10 border border-green-100 shadow-2xl flex flex-col items-center text-center">
@@ -475,62 +453,56 @@
                 Located conveniently in Bhandup West. Schedule your consultation today.
             </p>
             
-            <div class="glass-card p-8 md:p-10 rounded-3xl max-w-lg mx-auto shadow-2xl mb-12">
+            <div class="glass-card p-8 md:p-10 rounded-3xl max-w-lg mx-auto shadow-2xl mb-12" style="background: rgba(255,255,255,0.95);">
                 <form onsubmit="sendToWhatsapp(event)" class="space-y-4">
                     <div class="text-left">
-                        <label class="text-xs text-white uppercase font-bold ml-1 mb-1 block">Your Name</label>
-                        <input type="text" id="p_name" required class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors" placeholder="Enter Full Name">
+                        <label class="text-xs text-brand-green-dark uppercase font-bold ml-1 mb-1 block">Your Name</label>
+                        <input type="text" id="p_name" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-green-dark transition-colors" placeholder="Enter Full Name">
                     </div>
                     
                     <div class="text-left">
-                        <label class="text-xs text-white uppercase font-bold ml-1 mb-1 block">Phone Number</label>
-                        <input type="tel" id="p_phone" required class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors" placeholder="Enter Mobile Number">
+                        <label class="text-xs text-brand-green-dark uppercase font-bold ml-1 mb-1 block">Phone Number</label>
+                        <input type="tel" id="p_phone" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-green-dark transition-colors" placeholder="Enter Mobile Number">
                     </div>
 
                     <div class="text-left">
-                        <label class="text-xs text-white uppercase font-bold ml-1 mb-2 block">Is this your First Visit?</label>
-                        <div class="flex gap-6">
-                            <label class="flex items-center gap-2 cursor-pointer text-Black">
-                                <input type="radio" name="visit_type" value="First Time Visit" class="w-5 h-5 accent-Black-400" checked>
-                                <span>First Time Visit</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white">
-                                <input type="radio" name="visit_type" value="Repeat Visit" class="w-5 h-5 accent-Black-400">
-                                <span>Repeat Visit</span>
-                            </label>
-                        </div>
+                        <label class="text-xs text-brand-green-dark uppercase font-bold ml-1 mb-1 block">Is this your First Visit?</label>
+                        <select id="p_visit_type" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-green-dark transition-colors">
+                            <option value="First Time Visit">First Time Visit</option>
+                            <option value="Repeat Visit">Repeat Visit</option>
+                        </select>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="text-left">
-                            <label class="text-xs text-white uppercase font-bold ml-1 mb-1 block">Preferred Date</label>
-                            <input type="date" id="p_date" class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors">
+                            <label class="text-xs text-brand-green-dark uppercase font-bold ml-1 mb-1 block">Preferred Date</label>
+                            <input type="date" id="p_date" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-green-dark transition-colors">
                         </div>
                         <div class="text-left">
-                            <label class="text-xs text-white uppercase font-bold ml-1 mb-1 block">Preferred Time</label>
-                            <input type="time" id="p_time" class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors">
+                            <label class="text-xs text-brand-green-dark uppercase font-bold ml-1 mb-1 block">Preferred Time</label>
+                            <input type="time" id="p_time" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-green-dark transition-colors">
                         </div>
                     </div>
 
                     <div class="text-left">
-                        <label class="text-xs text-white uppercase font-bold ml-1 mb-1 block">Interested In</label>
-                        <select id="p_treatment" class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors">
-                            <option value="General Enquiry" class="text-black">General Enquiry</option>
-                            <option value="EECP Treatment" class="text-black">EECP Treatment</option>
-                            <option value="Cholesterol Reversal" class="text-black">Cholesterol Reversal</option>
-                            <option value="Hypertension Reversal" class="text-black">Hypertension Reversal</option>
-                            <option value="Diabetes Reversal" class="text-black">Diabetes Reversal</option>
-                            <option value="Weight Management" class="text-black">Weight Management</option>
-                            <option value="Ayurvedic Therapy" class="text-black">Ayurvedic Therapy</option>
+                        <label class="text-xs text-brand-green-dark uppercase font-bold ml-1 mb-1 block">Interested In</label>
+                        <select id="p_treatment" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-green-dark transition-colors">
+                            <option value="General Enquiry">General Enquiry</option>
+                            <option value="EECP Treatment">EECP Treatment</option>
+                            <option value="Cholesterol Reversal">Cholesterol Reversal</option>
+                            <option value="Hypertension Reversal">Hypertension Reversal</option>
+                            <option value="Diabetes Reversal">Diabetes Reversal</option>
+                            <option value="Weight Management">Weight Management</option>
+                            <option value="Ayurvedic Therapy">Ayurvedic Therapy</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full bg-white text-brand-green-dark font-bold text-lg py-4 rounded-xl hover:bg-green-50 transition-colors flex items-center justify-center gap-2 mt-4 shadow-lg">
+                    <button type="submit" class="w-full bg-brand-green-dark text-white font-bold text-lg py-4 rounded-xl hover:bg-brand-green-light transition-colors flex items-center justify-center gap-2 mt-4 shadow-lg">
                         <i class="ri-whatsapp-line"></i> Book Appointment
                     </button>
                 </form>
             </div>
 
-            <div class="mt-8 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm flex flex-col md:flex-row gap-6">
+            <div class="mt-8 bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm flex flex-col md:flex-row gap-6">
                 <div class="flex-1 flex flex-col justify-center text-left">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 bg-white rounded-full flex-shrink-0 flex items-center justify-center text-brand-green-dark shadow-lg">
@@ -538,26 +510,26 @@
                         </div>
                         <div>
                             <h4 class="text-white font-bold text-lg mb-2">Clinic Address</h4>
-                            <p class="text-green-200 text-sm leading-relaxed">
-                                Silver Star Heart Foundation and Healthcare Trust<br>
-                                near BJP office, Sahyadri Nagar,<br>
+                            <p class="text-white text-sm leading-relaxed font-medium">
+                                Silver Star Heart Foundation and Healthcare Trust,<br>
+                                Near BJP Office, Sahyadri Nagar,<br>
                                 Kaju Tekdi, Bhandup West,<br>
                                 Mumbai, Maharashtra 400078
                             </p>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Silver+Star+Heart+Foundation+Bhandup" target="_blank" class="mt-4 inline-block text-xs font-bold text-green-300 hover:text-white transition-colors uppercase tracking-wider">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Khadi+Machine+Sahyadri+Nagar+Bhandup+West+Mumbai" target="_blank" class="mt-4 inline-block text-xs font-bold text-white hover:text-green-200 transition-colors uppercase tracking-wider">
                                 Get Directions <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 h-56 rounded-xl overflow-hidden shadow-lg border border-white/10">
+                <div class="w-full md:w-1/2 h-56 rounded-xl overflow-hidden shadow-lg border border-white/20">
                     <iframe 
                         width="100%" 
                         height="100%" 
                         style="border:0" 
                         loading="lazy" 
                         allowfullscreen
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.9198696076777!2d72.9358!3d19.1551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA5JzE4LjQiTiA3MsKwNTYnMDguOSJF!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin">
+                        src="https://maps.google.com/maps?q=Khadi%20Machine%2C%20Sahyadri%20Nagar%20Bus%20Stop%2C%20Circle%2C%20Near%20BJP%20Office%2C%20Bhandup%20West%2C%20Mumbai%2C%20Maharashtra%20400078&t=&z=15&ie=UTF8&iwloc=&output=embed">
                     </iframe>
                 </div>
             </div>
@@ -569,6 +541,7 @@
             <h3 class="text-white font-bold text-xl tracking-tight mb-6 flex items-center justify-center gap-2">
                 <i class="ri-heart-pulse-fill"></i> SILVER STAR
             </h3>
+            <p class="text-sm font-medium text-white">Silver Star Heart Foundation and Healthcare Trust, Bhandup West</p>
             <p class="text-sm font-medium text-green-200">A Premium Website designed and Developed by WillPro Technologies, Mumbai</p>
             <p class="text-xs text-green-300 tracking-wider uppercase font-semibold">A World of Willpower Group Company</p>
             <p class="text-xs text-green-400 pt-8">© 2025 Silver Star Heart Foundation. All rights reserved.</p>
@@ -579,11 +552,11 @@
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
 
         const slides = [
-            { img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='text-brand-navy'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
-            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='text-brand-navy'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
-            { img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop", title: "Zero Hospitalization.<br><span class='text-brand-navy'>100% Non-Invasive.</span>", desc: "Walk in, relax for an hour, and walk out. No downtime, no anesthesia, just a healthier heart." },
-            { img: "https://images.unsplash.com/photo-1579684385180-1ea678bc0b98?q=80&w=2070&auto=format&fit=crop", title: "Restore Blood Flow.<br><span class='text-brand-navy'>Reclaim Your Life.</span>", desc: "Get back to doing what you love. Improve your stamina, energy levels, and overall quality of life." },
-            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "World-Class<br><span class='text-brand-navy'>Cardiac Care in Bhandup.</span>", desc: "Led by Dr. Neelam S. Pingle, Silver Star Heart Foundation brings global standards of non-surgical care to your neighborhood." }
+            { img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='text-brand-green-dark'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
+            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='text-brand-green-dark'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
+            { img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop", title: "Zero Hospitalization.<br><span class='text-brand-green-dark'>100% Non-Invasive.</span>", desc: "Walk in, relax for an hour, and walk out. No downtime, no anesthesia, just a healthier heart." },
+            { img: "https://images.unsplash.com/photo-1579684385180-1ea678bc0b98?q=80&w=2070&auto=format&fit=crop", title: "Restore Blood Flow.<br><span class='text-brand-green-dark'>Reclaim Your Life.</span>", desc: "Get back to doing what you love. Improve your stamina, energy levels, and overall quality of life." },
+            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "World-Class<br><span class='text-brand-green-dark'>Cardiac Care in Bhandup.</span>", desc: "Led by Dr. Neelam S. Pingle, Silver Star Heart Foundation brings global standards of non-surgical care to your neighborhood." }
         ];
 
         let currentSlide = 0;
@@ -612,7 +585,6 @@
         updateSlide();
         setInterval(updateSlide, 5000);
 
-        // Page Logic
         function openPage(id) {
             document.getElementById(id).classList.add('active');
             document.body.style.overflow = 'hidden'; 
@@ -622,18 +594,16 @@
             document.body.style.overflow = 'auto'; 
         }
 
-        // SCROLL AND SELECT SERVICE
         function bookService(serviceName) {
             document.getElementById('book-section').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('p_treatment').value = serviceName;
         }
 
-        // SMART WHATSAPP FORM LOGIC
         function sendToWhatsapp(e) {
             e.preventDefault();
             let name = document.getElementById('p_name').value;
             let phone = document.getElementById('p_phone').value;
-            let visitType = document.querySelector('input[name="visit_type"]:checked').value;
+            let visitType = document.getElementById('p_visit_type').value;
             let date = document.getElementById('p_date').value;
             let time = document.getElementById('p_time').value;
             let treatment = document.getElementById('p_treatment').value;
