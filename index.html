@@ -50,14 +50,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* Silver Text Glow Effect */
-        .silver-text {
-            background: linear-gradient(to right, #ffffff, #cbd5e1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(255,255,255,0.3);
-        }
-
         /* Premium Dark Green Textured Background */
         .premium-green-bg {
             background: linear-gradient(135deg, #0a3d26 0%, #062c1b 100%);
@@ -110,8 +102,8 @@
             background-position: center;
         }
         .hero-overlay {
-            /* STRONG WHITE OVERLAY FOR DARK TEXT READABILITY */
-            background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.6) 100%);
+            /* STRONG WHITE GRADIENT OVERLAY for High Contrast Text */
+            background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.6) 100%);
         }
 
         /* Dropdown Menu */
@@ -131,7 +123,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Smart Information Page */
+        /* Smart Information Page (Full Screen Overlay) */
         .info-page {
             position: fixed;
             inset: 0;
@@ -225,7 +217,7 @@
                 <span class="text-brand-green-dark">No Surgery Required.</span>
             </h1>
             
-            <p id="slider-desc" class="text-lg md:text-xl text-slate-800 mb-10 max-w-2xl font-medium leading-relaxed animate-fade-in">
+            <p id="slider-desc" class="text-lg md:text-xl text-slate-800 mb-10 max-w-2xl font-bold leading-relaxed animate-fade-in">
                 Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays.
             </p>
             
