@@ -28,14 +28,14 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     animation: {
-                        'simmer': 'simmer 3s infinite', /* Slower, more elegant pulse */
+                        'simmer': 'simmer 2s infinite',
                         'fade-in': 'fadeIn 1s ease-in-out',
                     },
                     keyframes: {
                         simmer: {
-                            '0%': { boxShadow: '0 0 0 0 rgba(10, 61, 38, 0.4)' }, /* Green glow */
-                            '70%': { boxShadow: '0 0 0 20px rgba(10, 61, 38, 0)' },
-                            '100%': { boxShadow: '0 0 0 0 rgba(10, 61, 38, 0)' },
+                            '0%': { boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)' },
+                            '70%': { boxShadow: '0 0 0 15px rgba(37, 211, 102, 0)' },
+                            '100%': { boxShadow: '0 0 0 0 rgba(37, 211, 102, 0)' },
                         },
                         fadeIn: {
                             '0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -62,7 +62,7 @@
         /* Floating Social Bar - Mobile Optimized */
         .social-floater {
             position: fixed;
-            right: 15px; /* Tighter to edge on mobile */
+            right: 15px;
             bottom: 25px;
             z-index: 100000; 
             display: flex;
@@ -72,7 +72,7 @@
         }
         
         .social-btn {
-            width: 40px; /* Smaller on Mobile */
+            width: 40px; /* Small for Mobile */
             height: 40px;
             border-radius: 50%;
             display: flex;
@@ -85,7 +85,8 @@
             cursor: pointer;
             backdrop-filter: blur(5px);
         }
-        
+
+        /* Desktop sizes for social icons */
         @media (min-width: 768px) {
             .social-floater { right: 30px; bottom: 40px; gap: 15px; }
             .social-btn { width: 50px; height: 50px; font-size: 1.5rem; }
@@ -95,12 +96,16 @@
 
         /* Simmering WhatsApp */
         .whatsapp-simmer {
+            width: 60px; /* Larger WA button */
+            height: 60px;
             background: #25D366;
+            font-size: 30px;
             animation: simmer 2s infinite;
         }
+
         /* Founder Box Simmer */
         .founder-simmer {
-            animation: simmer 4s infinite; /* Slower, subtle pulse for the profile card */
+            animation: simmer 4s infinite;
         }
 
         /* Hero Slider */
@@ -110,11 +115,10 @@
             background-position: center;
         }
         .hero-overlay {
-            /* STRONG WHITE GRADIENT OVERLAY for High Contrast Text */
             background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.6) 100%);
         }
 
-        /* Dropdown Menu (Desktop) */
+        /* Dropdown Menu */
         .dropdown:hover .dropdown-menu { display: block; opacity: 1; transform: translateY(0); }
         .dropdown-menu {
             display: none;
@@ -130,14 +134,14 @@
             transform: translateY(10px);
             transition: all 0.3s ease;
         }
-        
+
         /* Mobile Menu */
         #mobile-menu {
             transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
             max-height: 0;
             opacity: 0;
             overflow: hidden;
-            background: #0a3d26; /* Solid dark green matching nav */
+            background: #0a3d26;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         #mobile-menu.open {
@@ -145,7 +149,7 @@
             opacity: 1;
         }
 
-        /* Smart Information Page (Full Screen Overlay) */
+        /* Smart Information Page */
         .info-page {
             position: fixed;
             inset: 0;
@@ -164,14 +168,8 @@
         .info-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #475569; }
         .info-content li { margin-bottom: 0.5rem; }
         
-        /* Custom Radio Button */
-        input[type="radio"] {
-            accent-color: #0a3d26;
-            width: 1.2rem;
-            height: 1.2rem;
-        }
+        input[type="radio"] { accent-color: #0a3d26; width: 1.2rem; height: 1.2rem; }
         
-        /* Highlight Animation */
         .highlight-card {
             animation: highlightPulse 2s ease-out forwards;
             border: 2px solid #d4af37 !important;
@@ -208,7 +206,6 @@
                         <p class="text-[9px] text-green-200 tracking-[0.2em] uppercase">Heart Foundation</p>
                     </div>
                 </div>
-                
                 <button class="md:hidden text-white text-2xl focus:outline-none p-2" onclick="toggleMobileMenu()">
                     <i class="ri-menu-4-line"></i>
                 </button>
@@ -264,32 +261,34 @@
 
     <header id="hero-slider" class="hero-bg relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-36 md:pt-32">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-28 md:pt-32 flex flex-col justify-center h-full">
             
-            <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-brand-green-dark/10 text-brand-green-dark text-xs font-bold mb-8 border border-brand-green-dark/20 backdrop-blur-md">
-                <i class="ri-verified-badge-fill text-brand-green-dark"></i> Under the Care of Dr. Neelam S. Pingle
-            </span>
-            
-            <h1 id="slider-title" class="text-4xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-brand-navy animate-fade-in">
-                Revitalize Your Heart.<br />
-                <span class="text-brand-green-dark">No Surgery Required.</span>
-            </h1>
-            
-            <p id="slider-desc" class="text-lg md:text-xl text-slate-800 mb-10 max-w-2xl font-bold leading-relaxed animate-fade-in">
-                Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays.
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-5 items-start">
-                <button onclick="bookService('EECP Treatment')" class="w-full md:w-auto bg-brand-green-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-green-light transition-all flex items-center justify-center gap-2 shadow-xl">
-                    Start Your Assessment <i class="ri-arrow-right-line"></i>
-                </button>
+            <div class="text-center md:text-left">
+                <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-brand-green-dark/10 text-brand-green-dark text-xs font-bold mb-6 md:mb-8 border border-brand-green-dark/20 backdrop-blur-md">
+                    <i class="ri-verified-badge-fill text-brand-green-dark"></i> Under the Care of Dr. Neelam S. Pingle
+                </span>
                 
-                <div class="flex gap-2 mt-4 md:mt-4">
-                    <div class="h-1 w-8 bg-brand-navy rounded-full cursor-pointer transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
-                    <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
+                <h1 id="slider-title" class="text-4xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight tracking-tight text-brand-navy animate-fade-in">
+                    Revitalize Your Heart.<br />
+                    <span class="text-brand-green-dark">No Surgery Required.</span>
+                </h1>
+                
+                <p id="slider-desc" class="text-base md:text-xl text-slate-800 mb-8 md:mb-10 max-w-2xl font-medium leading-relaxed animate-fade-in mx-auto md:mx-0">
+                    Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays.
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-5 items-center md:items-start justify-center md:justify-start">
+                    <button onclick="bookService('EECP Treatment')" class="w-auto bg-brand-green-dark text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-sm md:text-lg hover:bg-brand-green-light transition-all flex items-center justify-center gap-2 shadow-xl">
+                        Start Your Assessment <i class="ri-arrow-right-line"></i>
+                    </button>
+                    
+                    <div class="flex gap-2 mt-4 md:mt-4">
+                        <div class="h-1 w-8 bg-brand-navy rounded-full cursor-pointer transition-all slider-dot"></div>
+                        <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
+                        <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
+                        <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
+                        <div class="h-1 w-8 bg-brand-navy/30 rounded-full cursor-pointer transition-all slider-dot"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -515,7 +514,7 @@
                 </div>
                 <div class="flex-1 w-full" data-aos="fade-left">
                     <div class="founder-simmer relative bg-gradient-to-b from-green-50 to-white rounded-[2rem] p-10 border border-green-100 shadow-2xl flex flex-col items-center text-center">
-                        <div class="w-72 h-96 bg-white rounded-3xl mb-8 shadow-2xl mx-auto overflow-hidden ring-4 ring-white">
+                        <div class="w-48 h-64 md:w-72 md:h-96 bg-white rounded-3xl mb-6 md:mb-8 shadow-2xl mx-auto overflow-hidden ring-4 ring-white">
                             <img src="dr.%20neelam%20pingle.png" alt="Dr. Neelam Shridhar Pingle" class="w-full h-full object-cover object-top">
                         </div>
                         <h3 class="text-2xl font-bold text-brand-navy mb-1">Dr. Neelam Shridhar Pingle</h3>
@@ -710,7 +709,6 @@
             window.open(`https://wa.me/917039196489?text=${message}`, '_blank');
         }
 
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('open');
