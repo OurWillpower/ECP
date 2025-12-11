@@ -59,7 +59,7 @@
 
         .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
-        /* Floating Social Bar - REDUCED SIZES */
+        /* Floating Social Bar */
         .social-floater {
             position: fixed;
             right: 15px;
@@ -67,43 +67,42 @@
             z-index: 100000; 
             display: flex;
             flex-direction: column-reverse;
-            gap: 10px; /* Reduced gap */
+            gap: 12px;
             align-items: center;
         }
         
         .social-btn {
-            width: 35px; /* Reduced Mobile Size */
+            width: 35px; /* Mobile Size */
             height: 35px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.1rem; /* Smaller icon font */
+            font-size: 1.1rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             cursor: pointer;
             backdrop-filter: blur(5px);
         }
 
-        /* Desktop sizes for social icons - ALSO REDUCED */
         @media (min-width: 768px) {
-            .social-floater { right: 30px; bottom: 40px; gap: 12px; }
+            .social-floater { right: 30px; bottom: 40px; gap: 15px; }
             .social-btn { width: 45px; height: 45px; font-size: 1.3rem; }
         }
         
         .social-btn:hover { transform: scale(1.1); }
 
-        /* Simmering WhatsApp - Slightly Reduced */
+        /* Simmering WhatsApp */
         .whatsapp-simmer {
-            width: 45px; 
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: #25D366;
-            font-size: 24px;
+            font-size: 26px;
             animation: simmer 2s infinite;
         }
         @media (min-width: 768px) {
-             .whatsapp-simmer { width: 55px; height: 55px; font-size: 28px; }
+             .whatsapp-simmer { width: 60px; height: 60px; font-size: 30px; }
         }
 
         /* Founder Box Simmer */
@@ -144,12 +143,12 @@
             transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
             max-height: 0;
             opacity: 0;
-            overflow: hidden;
+            overflow-y: auto;
             background: #0a3d26;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         #mobile-menu.open {
-            max-height: 100vh;
+            max-height: 90vh;
             opacity: 1;
         }
 
@@ -174,6 +173,7 @@
         
         input[type="radio"] { accent-color: #0a3d26; width: 1.2rem; height: 1.2rem; }
         
+        /* Highlight Animation */
         .highlight-card {
             animation: highlightPulse 2s ease-out forwards;
             border: 2px solid #d4af37 !important;
@@ -184,6 +184,23 @@
             50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
             100% { transform: scale(1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
         }
+
+        /* CUSTOM GOOGLE TRANSLATE STYLING */
+        /* Hide the top bar */
+        body { top: 0 !important; }
+        .goog-te-banner-frame { display: none !important; }
+        .goog-te-gadget-icon { display: none !important; }
+        .goog-te-gadget-simple {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            font-size: 14px !important;
+            line-height: 2em !important;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .goog-te-menu-value { color: #ffffff !important; }
+        .goog-te-menu-value span { color: #ffffff !important; border-left: none !important; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -192,7 +209,8 @@
         <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20EECP%20Treatment" target="_blank" class="social-btn whatsapp-simmer">
             <i class="ri-whatsapp-line"></i>
         </a>
-        <a href="#" class="social-btn bg-[#FF0000]"><i class="ri-youtube-fill"></i></a> <a href="#" class="social-btn bg-[#0077b5]"><i class="ri-linkedin-fill"></i></a>
+        <a href="#" class="social-btn bg-[#FF0000]"><i class="ri-youtube-fill"></i></a>
+        <a href="#" class="social-btn bg-[#0077b5]"><i class="ri-linkedin-fill"></i></a>
         <a href="#" class="social-btn bg-gradient-to-tr from-yellow-400 to-purple-600"><i class="ri-instagram-line"></i></a>
         <a href="#" class="social-btn bg-[#1877F2]"><i class="ri-facebook-fill"></i></a>
     </div>
@@ -215,10 +233,9 @@
                 </button>
             </div>
 
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-green-100">
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-green-100">
                 <a href="#" class="hover:text-white transition-colors">Home</a>
                 <a href="#about" class="hover:text-white transition-colors">About Us</a>
-                <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
                 
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
                     <span class="group-hover:text-white transition-colors flex items-center gap-1">Services <i class="ri-arrow-down-s-line"></i></span>
@@ -241,6 +258,10 @@
                     </div>
                 </div>
                 
+                <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+
+                <div id="google_translate_element" class="ml-2 border border-white/20 rounded px-2 py-1"></div>
+
                 <button onclick="bookService('General Enquiry')" class="bg-white text-brand-green-dark px-5 py-2 rounded-full font-bold hover:bg-green-50 transition-all shadow-md">Book Appointment</button>
             </div>
         </div>
@@ -405,27 +426,15 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
                 <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Clinic Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold tracking-wider">State-of-the-Art</span>
-                    </div>
                 </div>
                 <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Patient Care" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold tracking-wider">Patient Care</span>
-                    </div>
                 </div>
                 <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1516549655169-df83a092dd14?q=80&w=2070&auto=format&fit=crop" alt="Waiting Area" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold tracking-wider">Comfort</span>
-                    </div>
                 </div>
                 <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1974&auto=format&fit=crop" alt="Medical Team" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold tracking-wider">Expert Team</span>
-                    </div>
                 </div>
             </div>
 
@@ -657,7 +666,7 @@
                             <h4 class="text-white font-bold text-lg mb-2">Clinic Address</h4>
                             <p class="text-white text-sm leading-relaxed font-medium">
                                 Silver Star Heart Foundation and Healthcare Trust,<br>
-                                Near BJP office, Sahyadri Nagar,<br>
+                                Near BJP Office, Sahyadri Nagar,<br>
                                 Kaju Tekdi, Bhandup West,<br>
                                 Mumbai, Maharashtra 400078
                             </p>
@@ -692,6 +701,13 @@
             <p class="text-xs text-green-400 pt-8">© 2025 Silver Star Heart Foundation. All rights reserved.</p>
         </div>
     </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,mr,gu', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
