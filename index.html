@@ -72,7 +72,7 @@
         }
         
         .social-btn {
-            width: 40px; /* Small for Mobile */
+            width: 40px; 
             height: 40px;
             border-radius: 50%;
             display: flex;
@@ -96,11 +96,14 @@
 
         /* Simmering WhatsApp */
         .whatsapp-simmer {
-            width: 60px; /* Larger WA button */
-            height: 60px;
+            width: 50px; /* Adjusted size */
+            height: 50px;
             background: #25D366;
-            font-size: 30px;
+            font-size: 26px;
             animation: simmer 2s infinite;
+        }
+        @media (min-width: 768px) {
+             .whatsapp-simmer { width: 60px; height: 60px; font-size: 30px; }
         }
 
         /* Founder Box Simmer */
@@ -261,9 +264,9 @@
 
     <header id="hero-slider" class="hero-bg relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-28 md:pt-32 flex flex-col justify-center h-full">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-36 md:pt-32 flex flex-col justify-center h-full text-center md:text-left">
             
-            <div class="text-center md:text-left">
+            <div>
                 <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-brand-green-dark/10 text-brand-green-dark text-xs font-bold mb-6 md:mb-8 border border-brand-green-dark/20 backdrop-blur-md">
                     <i class="ri-verified-badge-fill text-brand-green-dark"></i> Under the Care of Dr. Neelam S. Pingle
                 </span>
