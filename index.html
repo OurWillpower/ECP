@@ -110,7 +110,7 @@
             background-position: center;
         }
         .hero-overlay {
-            background: rgba(255, 255, 255, 0.8); /* Made overlay lighter */
+            background: linear-gradient(to bottom, rgba(10, 61, 38, 0.8) 0%, rgba(11, 17, 32, 0.8) 100%);
         }
 
         /* Dropdown Menu */
@@ -471,13 +471,34 @@
             </p>
             
             <div class="glass-card p-8 md:p-10 rounded-3xl max-w-lg mx-auto shadow-2xl mb-12">
-                <form action="https://wa.me/917039196489" method="get" target="_blank" class="space-y-4">
+                <form onsubmit="sendToWhatsapp(event)" class="space-y-4">
                     <div class="text-left">
-                        <label class="text-xs text-green-200 uppercase font-bold ml-1 mb-1 block">Message Preview</label>
-                        <textarea name="text" class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-4 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors h-32">Hello Dr. Pingle, I am interested in an EECP consultation at Silver Star.</textarea>
+                        <label class="text-xs text-green-200 uppercase font-bold ml-1 mb-1 block">Your Name</label>
+                        <input type="text" id="p_name" required class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors" placeholder="Enter Full Name">
+                    </div>
+                    <div class="text-left">
+                        <label class="text-xs text-green-200 uppercase font-bold ml-1 mb-1 block">Phone Number</label>
+                        <input type="tel" id="p_phone" required class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors" placeholder="Enter Mobile Number">
+                    </div>
+                    <div class="text-left">
+                        <label class="text-xs text-green-200 uppercase font-bold ml-1 mb-1 block">Is this your First Visit?</label>
+                        <select id="p_visit_type" class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors">
+                            <option value="First Time Visit" class="text-black">First Time Visit</option>
+                            <option value="Repeat Visit" class="text-black">Repeat Visit</option>
+                        </select>
+                    </div>
+                    <div class="text-left">
+                        <label class="text-xs text-green-200 uppercase font-bold ml-1 mb-1 block">Interested In</label>
+                        <select id="p_treatment" class="w-full bg-brand-green-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-green-300 focus:outline-none focus:border-white/30 transition-colors">
+                            <option value="General Enquiry" class="text-black">General Enquiry</option>
+                            <option value="EECP Treatment" class="text-black">EECP Treatment</option>
+                            <option value="Diabetes Reversal" class="text-black">Diabetes Reversal</option>
+                            <option value="Hypertension" class="text-black">Hypertension</option>
+                            <option value="Weight Loss" class="text-black">Weight Loss</option>
+                        </select>
                     </div>
                     <button type="submit" class="w-full bg-white text-brand-green-dark font-bold text-lg py-4 rounded-xl hover:bg-green-50 transition-colors flex items-center justify-center gap-2 mt-4 shadow-lg">
-                        <i class="ri-whatsapp-line"></i> Send Enquiry on WhatsApp
+                        <i class="ri-whatsapp-line"></i> Send Enquiry via WhatsApp
                     </button>
                 </form>
             </div>
@@ -530,8 +551,8 @@
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
 
         const slides = [
-            { img: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?q=80&w=2072&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='text-brand-green-dark'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
-            { img: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='text-brand-green-dark'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
+            { img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='text-brand-green-dark'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
+            { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='text-brand-green-dark'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
             { img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop", title: "Zero Hospitalization.<br><span class='text-brand-green-dark'>100% Non-Invasive.</span>", desc: "Walk in, relax for an hour, and walk out. No downtime, no anesthesia, just a healthier heart." },
             { img: "https://images.unsplash.com/photo-1579684385180-1ea678bc0b98?q=80&w=2070&auto=format&fit=crop", title: "Restore Blood Flow.<br><span class='text-brand-green-dark'>Reclaim Your Life.</span>", desc: "Get back to doing what you love. Improve your stamina, energy levels, and overall quality of life." },
             { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "World-Class<br><span class='text-brand-green-dark'>Cardiac Care in Bhandup.</span>", desc: "Led by Dr. Neelam S. Pingle, Silver Star Heart Foundation brings global standards of non-surgical care to your neighborhood." }
@@ -571,6 +592,19 @@
         function closePage(id) {
             document.getElementById(id).classList.remove('active');
             document.body.style.overflow = 'auto'; 
+        }
+
+        // SMART WHATSAPP FORM LOGIC
+        function sendToWhatsapp(e) {
+            e.preventDefault();
+            let name = document.getElementById('p_name').value;
+            let phone = document.getElementById('p_phone').value;
+            let visitType = document.getElementById('p_visit_type').value;
+            let treatment = document.getElementById('p_treatment').value;
+            
+            let message = `*New Patient Enquiry* %0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Type:* ${visitType}%0A*Interest:* ${treatment}`;
+            
+            window.open(`https://wa.me/917039196489?text=${message}`, '_blank');
         }
     </script>
 </body>
