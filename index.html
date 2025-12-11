@@ -57,7 +57,7 @@
         }
 
         /* Glassmorphism */
-        .glass-nav { background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .glass-nav { background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
         /* Floating Social Bar */
@@ -123,20 +123,20 @@
             transition: all 0.3s ease;
         }
 
-        /* Full Screen Blog Page Effect */
+        /* Full Screen Blog Page - IMPROVED */
         .blog-page {
             position: fixed;
             inset: 0;
-            z-index: 9999;
+            z-index: 99999; /* Higher than navbar */
             background: white;
             overflow-y: auto;
-            transform: translateY(100%);
+            transform: translateX(100%); /* Slide in from right */
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            opacity: 0;
+            opacity: 1;
+            display: block;
         }
-        .blog-page.active { transform: translateY(0); opacity: 1; }
+        .blog-page.active { transform: translateX(0); }
         
-        /* Typography for Blogs */
         .blog-content p { margin-bottom: 1.5rem; line-height: 1.8; color: #475569; }
         .blog-content h3 { font-size: 1.5rem; font-weight: 700; color: #0b1120; margin-top: 2rem; margin-bottom: 1rem; }
         .blog-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #475569; }
@@ -229,10 +229,10 @@
         </div>
     </header>
 
-    <section id="blogs" class="py-20 px-6 bg-slate-50">
+    <section id="blogs" class="py-12 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-brand-navy mb-4">Medical Insights</h2>
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-brand-navy mb-2">Medical Insights</h2>
                 <p class="text-slate-600">Understanding the modern approach to heart health.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -265,77 +265,84 @@
     </section>
 
     <div id="blog-1" class="blog-page">
-        <div class="max-w-4xl mx-auto px-6 py-12">
-            <button onclick="closeBlog('blog-1')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg"><i class="ri-close-line text-2xl"></i></button>
-            <div class="bg-red-50 inline-block px-4 py-1 rounded-full text-red-600 font-bold text-xs uppercase tracking-wider mb-6">Current Medical Challenges</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The Hidden Risks of Invasive Heart Surgeries</h1>
-            <div class="blog-content">
-                <p class="text-xl text-slate-800 font-medium">While Angioplasty and Bypass surgery are life-saving in emergencies, they are often over-prescribed for stable patients. Understanding the risks is crucial for making an informed decision.</p>
-                <p>Invasive procedures involve physical trauma to the body. Angioplasty involves inserting a foreign object (stent) into the artery, while Bypass surgery requires opening the chest cavity. Both come with significant risks:</p>
-                <ul>
-                    <li><strong>Restenosis:</strong> The re-narrowing of the artery even after a stent is placed.</li>
-                    <li><strong>Infection:</strong> Surgical sites are prone to infections that can complicate recovery.</li>
-                    <li><strong>Long Recovery:</strong> Bypass patients often need months to return to normal life.</li>
-                    <li><strong>Cost:</strong> These procedures are financially draining and may need to be repeated.</li>
-                </ul>
-                <p>At Silver Star Heart Foundation, we believe in a "Heart First, Knife Last" approach. For the vast majority of stable angina and heart failure patients, non-invasive therapies offer a safer, equally effective route to recovery without the trauma of surgery.</p>
-                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-8">
-                    <h4 class="font-bold text-brand-navy mb-2">The Non-Invasive Alternative</h4>
-                    <p class="text-sm text-slate-600">We specialize in identifying patients who can avoid surgery entirely through EECP and lifestyle management.</p>
+        <div class="max-w-3xl mx-auto px-6 py-12 relative">
+            <button onclick="closeBlog('blog-1')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            
+            <div class="pt-10">
+                <div class="bg-red-50 inline-block px-4 py-1 rounded-full text-red-600 font-bold text-xs uppercase tracking-wider mb-6">Current Medical Challenges</div>
+                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The Hidden Risks of Invasive Heart Surgeries</h1>
+                <div class="blog-content">
+                    <p class="text-xl text-slate-800 font-medium">While Angioplasty and Bypass surgery are life-saving in emergencies, they are often over-prescribed for stable patients. Understanding the risks is crucial for making an informed decision.</p>
+                    <p>Invasive procedures involve physical trauma to the body. Angioplasty involves inserting a foreign object (stent) into the artery, while Bypass surgery requires opening the chest cavity. Both come with significant risks:</p>
+                    <ul>
+                        <li><strong>Restenosis:</strong> The re-narrowing of the artery even after a stent is placed.</li>
+                        <li><strong>Infection:</strong> Surgical sites are prone to infections that can complicate recovery.</li>
+                        <li><strong>Long Recovery:</strong> Bypass patients often need months to return to normal life.</li>
+                        <li><strong>Cost:</strong> These procedures are financially draining and may need to be repeated.</li>
+                    </ul>
+                    <p>At Silver Star Heart Foundation, we believe in a "Heart First, Knife Last" approach. For the vast majority of stable angina and heart failure patients, non-invasive therapies offer a safer, equally effective route to recovery without the trauma of surgery.</p>
+                    <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-8">
+                        <h4 class="font-bold text-brand-navy mb-2">The Non-Invasive Alternative</h4>
+                        <p class="text-sm text-slate-600">We specialize in identifying patients who can avoid surgery entirely through EECP and lifestyle management.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="blog-2" class="blog-page">
-        <div class="max-w-4xl mx-auto px-6 py-12">
-            <button onclick="closeBlog('blog-2')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg"><i class="ri-close-line text-2xl"></i></button>
-            <div class="bg-blue-50 inline-block px-4 py-1 rounded-full text-blue-600 font-bold text-xs uppercase tracking-wider mb-6">The Science</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Why EECP is Called the "Natural Bypass"</h1>
-            <div class="blog-content">
-                <p class="text-xl text-slate-800 font-medium">Your heart has thousands of tiny, dormant blood vessels called "collaterals." EECP wakes them up.</p>
-                <p>Enhanced External Counterpulsation (EECP) is a mechanical procedure that increases blood flow to the heart muscle. Think of it as a "second heart" pumping blood when your heart is resting (during diastole).</p>
-                <h3>How it Creates a Natural Bypass</h3>
-                <p>When the main highways (arteries) to your heart are blocked, EECP forces blood through the smaller side streets (collaterals). Over the course of 35 sessions, these small vessels widen and connect, forming a permanent "natural bypass" around the blockage.</p>
-                <ul>
-                    <li><strong>Angiogenesis:</strong> The formation of new blood vessels.</li>
-                    <li><strong>Vasodilation:</strong> Widening of existing blood vessels.</li>
-                    <li><strong>Improved Endothelial Function:</strong> The inner lining of your arteries becomes healthier and more elastic.</li>
-                </ul>
-                <p>The result? Blood bypasses the blockage naturally. Chest pain disappears. Stamina returns. And no surgeon ever touched you.</p>
+        <div class="max-w-3xl mx-auto px-6 py-12 relative">
+            <button onclick="closeBlog('blog-2')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            <div class="pt-10">
+                <div class="bg-blue-50 inline-block px-4 py-1 rounded-full text-blue-600 font-bold text-xs uppercase tracking-wider mb-6">The Science</div>
+                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Why EECP is Called the "Natural Bypass"</h1>
+                <div class="blog-content">
+                    <p class="text-xl text-slate-800 font-medium">Your heart has thousands of tiny, dormant blood vessels called "collaterals." EECP wakes them up.</p>
+                    <p>Enhanced External Counterpulsation (EECP) is a mechanical procedure that increases blood flow to the heart muscle. Think of it as a "second heart" pumping blood when your heart is resting (during diastole).</p>
+                    <h3>How it Creates a Natural Bypass</h3>
+                    <p>When the main highways (arteries) to your heart are blocked, EECP forces blood through the smaller side streets (collaterals). Over the course of 35 sessions, these small vessels widen and connect, forming a permanent "natural bypass" around the blockage.</p>
+                    <ul>
+                        <li><strong>Angiogenesis:</strong> The formation of new blood vessels.</li>
+                        <li><strong>Vasodilation:</strong> Widening of existing blood vessels.</li>
+                        <li><strong>Improved Endothelial Function:</strong> The inner lining of your arteries becomes healthier and more elastic.</li>
+                    </ul>
+                    <p>The result? Blood bypasses the blockage naturally. Chest pain disappears. Stamina returns. And no surgeon ever touched you.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div id="blog-3" class="blog-page">
-        <div class="max-w-4xl mx-auto px-6 py-12">
-            <button onclick="closeBlog('blog-3')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg"><i class="ri-close-line text-2xl"></i></button>
-            <div class="bg-green-50 inline-block px-4 py-1 rounded-full text-green-600 font-bold text-xs uppercase tracking-wider mb-6">The Process</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Your 35-Day Journey to a Renewed Heart</h1>
-            <div class="blog-content">
-                <p class="text-xl text-slate-800 font-medium">What does an EECP session feel like? Surprisingly, it feels like a massage.</p>
-                <p>Many patients are anxious before their first session, expecting a medical procedure. They are relieved to find it is actually relaxing. Here is what happens:</p>
-                
-                <div class="space-y-6 mt-8">
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">1</div>
-                        <div>
-                            <h4 class="font-bold text-brand-navy text-lg">Preparation</h4>
-                            <p class="text-slate-600">You lie down on a padded bed. Three sets of pneumatic cuffs are wrapped around your calves, thighs, and buttocks. ECG electrodes are attached to your chest to monitor your heartbeat.</p>
+        <div class="max-w-3xl mx-auto px-6 py-12 relative">
+            <button onclick="closeBlog('blog-3')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            <div class="pt-10">
+                <div class="bg-green-50 inline-block px-4 py-1 rounded-full text-green-600 font-bold text-xs uppercase tracking-wider mb-6">The Process</div>
+                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Your 35-Day Journey to a Renewed Heart</h1>
+                <div class="blog-content">
+                    <p class="text-xl text-slate-800 font-medium">What does an EECP session feel like? Surprisingly, it feels like a massage.</p>
+                    <p>Many patients are anxious before their first session, expecting a medical procedure. They are relieved to find it is actually relaxing. Here is what happens:</p>
+                    
+                    <div class="space-y-6 mt-8">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">1</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Preparation</h4>
+                                <p class="text-slate-600">You lie down on a padded bed. Three sets of pneumatic cuffs are wrapped around your calves, thighs, and buttocks. ECG electrodes are attached to your chest to monitor your heartbeat.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">2</div>
-                        <div>
-                            <h4 class="font-bold text-brand-navy text-lg">The Session (1 Hour)</h4>
-                            <p class="text-slate-600">The cuffs inflate and deflate in precise synchronization with your heartbeat. When your heart rests, the cuffs squeeze, pushing oxygen-rich blood back to your heart. It feels like a firm, rhythmic massage.</p>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">2</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">The Session (1 Hour)</h4>
+                                <p class="text-slate-600">The cuffs inflate and deflate in precise synchronization with your heartbeat. When your heart rests, the cuffs squeeze, pushing oxygen-rich blood back to your heart. It feels like a firm, rhythmic massage.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">3</div>
-                        <div>
-                            <h4 class="font-bold text-brand-navy text-lg">Post-Session</h4>
-                            <p class="text-slate-600">The cuffs are removed. You can get up immediately and drive home, go to work, or go for a walk. There is zero downtime.</p>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">3</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Post-Session</h4>
+                                <p class="text-slate-600">The cuffs are removed. You can get up immediately and drive home, go to work, or go for a walk. There is zero downtime.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -344,29 +351,31 @@
     </div>
 
     <div id="blog-4" class="blog-page">
-        <div class="max-w-4xl mx-auto px-6 py-12">
-            <button onclick="closeBlog('blog-4')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg"><i class="ri-close-line text-2xl"></i></button>
-            <div class="bg-purple-50 inline-block px-4 py-1 rounded-full text-purple-600 font-bold text-xs uppercase tracking-wider mb-6">Validation</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Global Recognition & FDA Approval</h1>
-            <div class="blog-content">
-                <p class="text-xl text-slate-800 font-medium">EECP is not experimental. It is a time-tested, FDA-approved therapy used by world-leading hospitals.</p>
-                <p>Patients often ask, "If this is so good, why haven't I heard of it?" The answer often lies in the dominance of surgical interventions in standard hospital protocols. However, the scientific validation for EECP is undeniable.</p>
-                <h3>Regulatory Approvals</h3>
-                <ul>
-                    <li><strong>US FDA:</strong> Approved for treatment of Angina Pectoris, Cardiogenic Shock, and Heart Failure.</li>
-                    <li><strong>AHA / ACC:</strong> The American Heart Association and American College of Cardiology include EECP in their guidelines for management of stable angina.</li>
-                    <li><strong>European Society of Cardiology:</strong> Recognized as a valid therapy for refractory angina.</li>
-                </ul>
-                <p>Major institutions like the Mayo Clinic, Cleveland Clinic, and Johns Hopkins in the USA have EECP centers. Silver Star Heart Foundation brings this exact same world-class standard of care to Mumbai.</p>
+        <div class="max-w-3xl mx-auto px-6 py-12 relative">
+            <button onclick="closeBlog('blog-4')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            <div class="pt-10">
+                <div class="bg-purple-50 inline-block px-4 py-1 rounded-full text-purple-600 font-bold text-xs uppercase tracking-wider mb-6">Validation</div>
+                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Global Recognition & FDA Approval</h1>
+                <div class="blog-content">
+                    <p class="text-xl text-slate-800 font-medium">EECP is not experimental. It is a time-tested, FDA-approved therapy used by world-leading hospitals.</p>
+                    <p>Patients often ask, "If this is so good, why haven't I heard of it?" The answer often lies in the dominance of surgical interventions in standard hospital protocols. However, the scientific validation for EECP is undeniable.</p>
+                    <h3>Regulatory Approvals</h3>
+                    <ul>
+                        <li><strong>US FDA:</strong> Approved for treatment of Angina Pectoris, Cardiogenic Shock, and Heart Failure.</li>
+                        <li><strong>AHA / ACC:</strong> The American Heart Association and American College of Cardiology include EECP in their guidelines for management of stable angina.</li>
+                        <li><strong>European Society of Cardiology:</strong> Recognized as a valid therapy for refractory angina.</li>
+                    </ul>
+                    <p>Major institutions like the Mayo Clinic, Cleveland Clinic, and Johns Hopkins in the USA have EECP centers. Silver Star Heart Foundation brings this exact same world-class standard of care to Mumbai.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <section class="py-20 px-6 bg-white overflow-hidden border-t border-slate-100">
+    <section class="py-12 px-6 bg-white overflow-hidden border-t border-slate-100">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="flex-1" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-100 rounded-full text-brand-navy text-sm font-bold mb-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-100 rounded-full text-brand-navy text-sm font-bold mb-6">
                         <i class="ri-user-star-line"></i> Medical Director & Founder
                     </div>
                     <h2 class="text-4xl font-bold text-brand-navy mb-6">Dr. Neelam Shridhar Pingle</h2>
@@ -391,7 +400,7 @@
         </div>
     </section>
 
-    <section id="book-section" class="py-20 px-6 premium-bg text-white text-center relative overflow-hidden">
+    <section id="book-section" class="py-12 px-6 premium-bg text-white text-center relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10" data-aos="zoom-in">
             <h2 class="text-3xl md:text-5xl font-bold mb-6">Visit Silver Star Heart Foundation</h2>
             <p class="text-slate-400 mb-12 text-lg">
@@ -455,7 +464,6 @@
     <script>
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
 
-        // Slider Logic
         const slides = [
             { img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop", title: "Revitalize Your Heart.<br><span class='silver-text'>No Surgery Required.</span>", desc: "Experience the gold standard in non-invasive cardiac care. We restore natural blood flow without stents, cuts, or hospital stays." },
             { img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop", title: "FDA-Approved<br><span class='silver-text'>Natural Bypass Therapy.</span>", desc: "Our EECP treatment is scientifically proven to improve heart function and reduce chest pain safely and effectively." },
@@ -490,14 +498,13 @@
         updateSlide();
         setInterval(updateSlide, 5000);
 
-        // Blog Logic
         function openBlog(id) {
             document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden'; // Stop background scrolling
+            document.body.style.overflow = 'hidden'; 
         }
         function closeBlog(id) {
             document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = 'auto'; // Resume background scrolling
+            document.body.style.overflow = 'auto'; 
         }
     </script>
 </body>
