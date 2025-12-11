@@ -110,7 +110,7 @@
             background-position: center;
         }
         .hero-overlay {
-            /* Strong White Overlay for Readability */
+            /* Strong White Overlay */
             background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.6) 100%);
         }
 
@@ -131,7 +131,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Smart Information Page (Full Screen Overlay) */
+        /* Smart Information Page */
         .info-page {
             position: fixed;
             inset: 0;
@@ -155,6 +155,19 @@
             accent-color: #0a3d26;
             width: 1.2rem;
             height: 1.2rem;
+        }
+
+        /* HIGHLIGHT ANIMATION FOR CARDS */
+        .highlight-card {
+            animation: highlightPulse 2s ease-out forwards;
+            border: 2px solid #d4af37 !important; /* Gold Border */
+            z-index: 20;
+        }
+
+        @keyframes highlightPulse {
+            0% { transform: scale(1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
         }
     </style>
 </head>
@@ -188,12 +201,12 @@
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
                     <span class="group-hover:text-white transition-colors flex items-center gap-1">Services <i class="ri-arrow-down-s-line"></i></span>
                     <div class="dropdown-menu">
-                        <a href="#service-eecp" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">EECP Treatment</a>
-                        <a href="#service-cholesterol" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Cholesterol Reversal</a>
-                        <a href="#service-hypertension" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Hypertension Reversal</a>
-                        <a href="#service-diabetes" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Diabetes Reversal</a>
-                        <a href="#service-weight" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Weight Management</a>
-                        <a href="#service-ayurveda" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Ayurvedic Therapy</a>
+                        <button onclick="scrollToService('service-eecp')" class="block w-full text-left px-6 py-2 hover:bg-slate-50 text-slate-700">EECP Treatment</button>
+                        <button onclick="scrollToService('service-cholesterol')" class="block w-full text-left px-6 py-2 hover:bg-slate-50 text-slate-700">Cholesterol Reversal</button>
+                        <button onclick="scrollToService('service-hypertension')" class="block w-full text-left px-6 py-2 hover:bg-slate-50 text-slate-700">Hypertension Reversal</button>
+                        <button onclick="scrollToService('service-diabetes')" class="block w-full text-left px-6 py-2 hover:bg-slate-50 text-slate-700">Diabetes Reversal</button>
+                        <button onclick="scrollToService('service-weight')" class="block w-full text-left px-6 py-2 hover:bg-slate-50 text-slate-700">Weight Management</button>
+                        <button onclick="scrollToService('service-ayurveda')" class="block w-full text-left px-6 py-2 hover:bg-slate-50 text-slate-700">Ayurvedic Therapy</button>
                     </div>
                 </div>
 
@@ -253,7 +266,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div id="service-eecp" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer scroll-mt-32">
+                <div id="service-eecp" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-white border border-slate-100 transition-all duration-300">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-white/80 transition-opacity duration-500"></div>
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
@@ -265,7 +278,7 @@
                         <button onclick="bookService('EECP Treatment')" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</button>
                     </div>
                 </div>
-                <div id="service-cholesterol" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer scroll-mt-32">
+                <div id="service-cholesterol" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-white border border-slate-100 transition-all duration-300">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-white/80 transition-opacity duration-500"></div>
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
@@ -277,7 +290,7 @@
                         <button onclick="bookService('Cholesterol Reversal')" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</button>
                     </div>
                 </div>
-                <div id="service-hypertension" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer scroll-mt-32">
+                <div id="service-hypertension" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-white border border-slate-100 transition-all duration-300">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2000&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-white/80 transition-opacity duration-500"></div>
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
@@ -289,7 +302,7 @@
                         <button onclick="bookService('Hypertension Reversal')" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</button>
                     </div>
                 </div>
-                <div id="service-diabetes" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer scroll-mt-32">
+                <div id="service-diabetes" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-white border border-slate-100 transition-all duration-300">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-white/80 transition-opacity duration-500"></div>
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
@@ -301,7 +314,7 @@
                         <button onclick="bookService('Diabetes Reversal')" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</button>
                     </div>
                 </div>
-                <div id="service-weight" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer scroll-mt-32">
+                <div id="service-weight" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-white border border-slate-100 transition-all duration-300">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-white/80 transition-opacity duration-500"></div>
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
@@ -313,7 +326,7 @@
                         <button onclick="bookService('Weight Management')" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</button>
                     </div>
                 </div>
-                <div id="service-ayurveda" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer scroll-mt-32">
+                <div id="service-ayurveda" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-white border border-slate-100 transition-all duration-300">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop');"></div>
                     <div class="absolute inset-0 bg-white/80 transition-opacity duration-500"></div>
                     <div class="relative z-10 h-full flex flex-col justify-end p-6 text-brand-navy">
@@ -631,7 +644,22 @@
             document.body.style.overflow = 'auto'; 
         }
 
-        // SCROLL AND SELECT SERVICE
+        // SCROLL TO SERVICE WITH HIGHLIGHT
+        function scrollToService(id) {
+            const element = document.getElementById(id);
+            if(element) {
+                // Scroll
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Highlight
+                element.classList.add('highlight-card');
+                // Remove highlight after animation (2s)
+                setTimeout(() => {
+                    element.classList.remove('highlight-card');
+                }, 2000);
+            }
+        }
+
+        // SCROLL AND SELECT SERVICE (FOR BOOKING BUTTON)
         function bookService(serviceName) {
             document.getElementById('book-section').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('p_treatment').value = serviceName;
