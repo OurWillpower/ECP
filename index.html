@@ -123,14 +123,14 @@
             transition: all 0.3s ease;
         }
 
-        /* Full Screen Blog Page - IMPROVED */
+        /* Smart Page System (Full Screen) */
         .blog-page {
             position: fixed;
             inset: 0;
-            z-index: 99999; /* Higher than navbar */
+            z-index: 99999;
             background: white;
             overflow-y: auto;
-            transform: translateX(100%); /* Slide in from right */
+            transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             opacity: 1;
             display: block;
@@ -171,27 +171,16 @@
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
                     <span class="group-hover:text-white transition-colors flex items-center gap-1">Treatments <i class="ri-arrow-down-s-line"></i></span>
                     <div class="dropdown-menu">
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Heart Failure</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Angina (Chest Pain)</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Coronary Artery Disease</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Post-Bypass Recovery</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Heart Failure</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Angina (Chest Pain)</a>
+                        <a href="#services" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Coronary Artery Disease</a>
                     </div>
                 </div>
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
                     <span class="group-hover:text-white transition-colors flex items-center gap-1">Know EECP <i class="ri-arrow-down-s-line"></i></span>
                     <div class="dropdown-menu">
                         <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">What is EECP?</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">How it Works</a>
                         <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Scientific Evidence</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">FDA Approval</a>
-                    </div>
-                </div>
-                <div class="relative dropdown group h-full py-4 cursor-pointer">
-                    <span class="group-hover:text-white transition-colors flex items-center gap-1">Wellness <i class="ri-arrow-down-s-line"></i></span>
-                    <div class="dropdown-menu">
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Diabetes Reversal</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Blood Pressure Control</a>
-                        <a href="#" class="block px-6 py-2 hover:bg-slate-50 text-slate-700">Weight Management</a>
                     </div>
                 </div>
                 <a href="#blogs" class="hover:text-white transition-colors">Blogs</a>
@@ -203,7 +192,7 @@
 
     <header id="hero-slider" class="hero-bg relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-32">
             <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/10 text-slate-200 text-xs font-semibold mb-8 border border-white/20 backdrop-blur-md">
                 <i class="ri-verified-badge-fill text-blue-400"></i> Under the Care of Dr. Neelam S. Pingle
             </span>
@@ -229,35 +218,74 @@
         </div>
     </header>
 
-    <section id="blogs" class="py-12 px-6 bg-slate-50">
+    <section id="services" class="py-16 px-6 bg-white relative z-20 -mt-10 rounded-t-3xl">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-10" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-brand-navy mb-2">Medical Insights</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-navy">Our Specialized Treatments</h2>
+                <p class="text-slate-500">Select a condition to book your specialized consultation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all group text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-4 text-red-500 shadow-sm"><i class="ri-heart-pulse-fill text-3xl"></i></div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Heart Failure</h3>
+                    <p class="text-sm text-slate-500 mb-6">Improve pumping capacity (LVEF) and reduce breathlessness naturally.</p>
+                    <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Heart%20Failure%20treatment" target="_blank" class="block w-full py-3 rounded-xl bg-brand-navy text-white font-bold hover:bg-blue-900 transition-colors">Book Now</a>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all group text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-4 text-orange-500 shadow-sm"><i class="ri-fire-fill text-3xl"></i></div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Angina (Chest Pain)</h3>
+                    <p class="text-sm text-slate-500 mb-6">Eliminate chest pain and reduce dependency on Nitrates/medication.</p>
+                    <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Angina%20treatment" target="_blank" class="block w-full py-3 rounded-xl bg-brand-navy text-white font-bold hover:bg-blue-900 transition-colors">Book Now</a>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all group text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-4 text-blue-500 shadow-sm"><i class="ri-flow-chart text-3xl"></i></div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Artery Blockage</h3>
+                    <p class="text-sm text-slate-500 mb-6">Create natural bypass channels around blocked arteries without stents.</p>
+                    <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Blockage%20treatment" target="_blank" class="block w-full py-3 rounded-xl bg-brand-navy text-white font-bold hover:bg-blue-900 transition-colors">Book Now</a>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all group text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-4 text-green-500 shadow-sm"><i class="ri-leaf-fill text-3xl"></i></div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Diabetes Reversal</h3>
+                    <p class="text-sm text-slate-500 mb-6">Holistic management to control sugar levels and protect your heart.</p>
+                    <a href="https://wa.me/917039196489?text=I%20want%20to%20book%20an%20appointment%20for%20Diabetes%20Reversal" target="_blank" class="block w-full py-3 rounded-xl bg-brand-navy text-white font-bold hover:bg-blue-900 transition-colors">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blogs" class="py-16 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-brand-navy mb-4">Medical Insights</h2>
                 <p class="text-slate-600">Understanding the modern approach to heart health.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-1')" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-4 text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors"><i class="ri-alert-line text-xl"></i></div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-3">Problems with Invasive Techniques</h3>
-                    <p class="text-sm text-slate-600 mb-4 leading-relaxed line-clamp-3">Traditional surgeries like Angioplasty and Bypass come with risks of infection, long recovery times, and recurrence of blockages...</p>
+                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-1')" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-4 text-red-500"><i class="ri-alert-line text-xl"></i></div>
+                    <h3 class="text-lg font-bold text-brand-navy mb-3">Risks of Invasive Surgery</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">Surgeries like Angioplasty come with risks of infection and recovery time...</p>
                     <span class="text-xs font-bold text-brand-navy uppercase tracking-wider flex items-center gap-1 group-hover:text-blue-600 transition-colors">Read Full Article <i class="ri-arrow-right-line"></i></span>
                 </article>
-                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-2')" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-4 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors"><i class="ri-heart-add-line text-xl"></i></div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-3">Why Choose EECP?</h3>
-                    <p class="text-sm text-slate-600 mb-4 leading-relaxed line-clamp-3">EECP is the "Natural Bypass." It uses your body's own circulatory system to create new pathways for blood flow completely non-invasively...</p>
+                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-2')" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-4 text-blue-500"><i class="ri-heart-add-line text-xl"></i></div>
+                    <h3 class="text-lg font-bold text-brand-navy mb-3">Science Behind EECP</h3>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">How EECP creates new natural pathways for blood flow...</p>
                     <span class="text-xs font-bold text-brand-navy uppercase tracking-wider flex items-center gap-1 group-hover:text-blue-600 transition-colors">Read Full Article <i class="ri-arrow-right-line"></i></span>
                 </article>
-                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-3')" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mb-4 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors"><i class="ri-time-line text-xl"></i></div>
+                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-3')" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mb-4 text-green-500"><i class="ri-time-line text-xl"></i></div>
                     <h3 class="text-lg font-bold text-brand-navy mb-3">The 35-Day Journey</h3>
-                    <p class="text-sm text-slate-600 mb-4 leading-relaxed line-clamp-3">Treatment is simple: You lie down while specialized cuffs gently massage your legs. It is so relaxing that many patients sleep...</p>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">A relaxing, 1-hour daily therapy that requires no hospitalization...</p>
                     <span class="text-xs font-bold text-brand-navy uppercase tracking-wider flex items-center gap-1 group-hover:text-blue-600 transition-colors">Read Full Article <i class="ri-arrow-right-line"></i></span>
                 </article>
-                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-4')" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center mb-4 text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-colors"><i class="ri-global-line text-xl"></i></div>
+                <article class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform cursor-pointer group" onclick="openBlog('blog-4')" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center mb-4 text-purple-500"><i class="ri-global-line text-xl"></i></div>
                     <h3 class="text-lg font-bold text-brand-navy mb-3">Global Recognition</h3>
-                    <p class="text-sm text-slate-600 mb-4 leading-relaxed line-clamp-3">EECP is FDA-approved in the USA and recognized worldwide as a standard of care for managing angina and heart failure...</p>
+                    <p class="text-sm text-slate-600 mb-4 line-clamp-3">FDA-approved and recognized by the American Heart Association...</p>
                     <span class="text-xs font-bold text-brand-navy uppercase tracking-wider flex items-center gap-1 group-hover:text-blue-600 transition-colors">Read Full Article <i class="ri-arrow-right-line"></i></span>
                 </article>
             </div>
@@ -266,25 +294,19 @@
 
     <div id="blog-1" class="blog-page">
         <div class="max-w-3xl mx-auto px-6 py-12 relative">
-            <button onclick="closeBlog('blog-1')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
-            
+            <button onclick="closeBlog('blog-1')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
             <div class="pt-10">
-                <div class="bg-red-50 inline-block px-4 py-1 rounded-full text-red-600 font-bold text-xs uppercase tracking-wider mb-6">Current Medical Challenges</div>
+                <div class="bg-red-50 inline-block px-4 py-1 rounded-full text-red-600 font-bold text-xs uppercase tracking-wider mb-6">Insights</div>
                 <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The Hidden Risks of Invasive Heart Surgeries</h1>
                 <div class="blog-content">
-                    <p class="text-xl text-slate-800 font-medium">While Angioplasty and Bypass surgery are life-saving in emergencies, they are often over-prescribed for stable patients. Understanding the risks is crucial for making an informed decision.</p>
-                    <p>Invasive procedures involve physical trauma to the body. Angioplasty involves inserting a foreign object (stent) into the artery, while Bypass surgery requires opening the chest cavity. Both come with significant risks:</p>
+                    <p class="text-xl text-slate-800 font-medium">While Angioplasty and Bypass surgery are life-saving in emergencies, they are often over-prescribed. Understanding the risks is crucial.</p>
+                    <p>Invasive procedures involve physical trauma. Angioplasty involves inserting a foreign object (stent), while Bypass requires opening the chest. Risks include:</p>
                     <ul>
-                        <li><strong>Restenosis:</strong> The re-narrowing of the artery even after a stent is placed.</li>
-                        <li><strong>Infection:</strong> Surgical sites are prone to infections that can complicate recovery.</li>
-                        <li><strong>Long Recovery:</strong> Bypass patients often need months to return to normal life.</li>
-                        <li><strong>Cost:</strong> These procedures are financially draining and may need to be repeated.</li>
+                        <li><strong>Restenosis:</strong> Re-narrowing of the artery.</li>
+                        <li><strong>Infection:</strong> Complications at surgical sites.</li>
+                        <li><strong>Long Recovery:</strong> Months of downtime.</li>
                     </ul>
-                    <p>At Silver Star Heart Foundation, we believe in a "Heart First, Knife Last" approach. For the vast majority of stable angina and heart failure patients, non-invasive therapies offer a safer, equally effective route to recovery without the trauma of surgery.</p>
-                    <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 my-8">
-                        <h4 class="font-bold text-brand-navy mb-2">The Non-Invasive Alternative</h4>
-                        <p class="text-sm text-slate-600">We specialize in identifying patients who can avoid surgery entirely through EECP and lifestyle management.</p>
-                    </div>
+                    <p>At Silver Star, we believe in a "Heart First, Knife Last" approach. For stable patients, EECP offers a safer route.</p>
                 </div>
             </div>
         </div>
@@ -292,21 +314,18 @@
 
     <div id="blog-2" class="blog-page">
         <div class="max-w-3xl mx-auto px-6 py-12 relative">
-            <button onclick="closeBlog('blog-2')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            <button onclick="closeBlog('blog-2')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
             <div class="pt-10">
-                <div class="bg-blue-50 inline-block px-4 py-1 rounded-full text-blue-600 font-bold text-xs uppercase tracking-wider mb-6">The Science</div>
+                <div class="bg-blue-50 inline-block px-4 py-1 rounded-full text-blue-600 font-bold text-xs uppercase tracking-wider mb-6">Science</div>
                 <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Why EECP is Called the "Natural Bypass"</h1>
                 <div class="blog-content">
                     <p class="text-xl text-slate-800 font-medium">Your heart has thousands of tiny, dormant blood vessels called "collaterals." EECP wakes them up.</p>
-                    <p>Enhanced External Counterpulsation (EECP) is a mechanical procedure that increases blood flow to the heart muscle. Think of it as a "second heart" pumping blood when your heart is resting (during diastole).</p>
-                    <h3>How it Creates a Natural Bypass</h3>
-                    <p>When the main highways (arteries) to your heart are blocked, EECP forces blood through the smaller side streets (collaterals). Over the course of 35 sessions, these small vessels widen and connect, forming a permanent "natural bypass" around the blockage.</p>
+                    <p>When main arteries are blocked, EECP forces blood through smaller vessels. Over 35 sessions, these vessels widen and connect, forming a natural bypass.</p>
                     <ul>
-                        <li><strong>Angiogenesis:</strong> The formation of new blood vessels.</li>
-                        <li><strong>Vasodilation:</strong> Widening of existing blood vessels.</li>
-                        <li><strong>Improved Endothelial Function:</strong> The inner lining of your arteries becomes healthier and more elastic.</li>
+                        <li><strong>Angiogenesis:</strong> Formation of new vessels.</li>
+                        <li><strong>Vasodilation:</strong> Widening of existing vessels.</li>
                     </ul>
-                    <p>The result? Blood bypasses the blockage naturally. Chest pain disappears. Stamina returns. And no surgeon ever touched you.</p>
+                    <p>The result? Blood bypasses the blockage naturally. Chest pain disappears.</p>
                 </div>
             </div>
         </div>
@@ -314,37 +333,18 @@
 
     <div id="blog-3" class="blog-page">
         <div class="max-w-3xl mx-auto px-6 py-12 relative">
-            <button onclick="closeBlog('blog-3')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            <button onclick="closeBlog('blog-3')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
             <div class="pt-10">
-                <div class="bg-green-50 inline-block px-4 py-1 rounded-full text-green-600 font-bold text-xs uppercase tracking-wider mb-6">The Process</div>
-                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Your 35-Day Journey to a Renewed Heart</h1>
+                <div class="bg-green-50 inline-block px-4 py-1 rounded-full text-green-600 font-bold text-xs uppercase tracking-wider mb-6">Process</div>
+                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The 35-Day Journey</h1>
                 <div class="blog-content">
-                    <p class="text-xl text-slate-800 font-medium">What does an EECP session feel like? Surprisingly, it feels like a massage.</p>
-                    <p>Many patients are anxious before their first session, expecting a medical procedure. They are relieved to find it is actually relaxing. Here is what happens:</p>
-                    
-                    <div class="space-y-6 mt-8">
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">1</div>
-                            <div>
-                                <h4 class="font-bold text-brand-navy text-lg">Preparation</h4>
-                                <p class="text-slate-600">You lie down on a padded bed. Three sets of pneumatic cuffs are wrapped around your calves, thighs, and buttocks. ECG electrodes are attached to your chest to monitor your heartbeat.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">2</div>
-                            <div>
-                                <h4 class="font-bold text-brand-navy text-lg">The Session (1 Hour)</h4>
-                                <p class="text-slate-600">The cuffs inflate and deflate in precise synchronization with your heartbeat. When your heart rests, the cuffs squeeze, pushing oxygen-rich blood back to your heart. It feels like a firm, rhythmic massage.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 bg-brand-navy text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">3</div>
-                            <div>
-                                <h4 class="font-bold text-brand-navy text-lg">Post-Session</h4>
-                                <p class="text-slate-600">The cuffs are removed. You can get up immediately and drive home, go to work, or go for a walk. There is zero downtime.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-xl text-slate-800 font-medium">It feels like a rhythmic massage, not a medical procedure.</p>
+                    <p>You lie on a comfortable bed. Cuffs on your legs inflate and deflate in sync with your heart. This pumps oxygen-rich blood to your heart muscle while it rests.</p>
+                    <ul>
+                        <li><strong>1 Hour Daily:</strong> Fit it into your schedule.</li>
+                        <li><strong>Non-Invasive:</strong> No needles, no cuts.</li>
+                        <li><strong>Zero Downtime:</strong> Drive back home immediately.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -352,26 +352,20 @@
 
     <div id="blog-4" class="blog-page">
         <div class="max-w-3xl mx-auto px-6 py-12 relative">
-            <button onclick="closeBlog('blog-4')" class="fixed top-6 right-6 md:right-12 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 shadow-lg text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
+            <button onclick="closeBlog('blog-4')" class="fixed top-6 right-6 bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors z-50 text-brand-navy"><i class="ri-close-line text-2xl"></i></button>
             <div class="pt-10">
                 <div class="bg-purple-50 inline-block px-4 py-1 rounded-full text-purple-600 font-bold text-xs uppercase tracking-wider mb-6">Validation</div>
-                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">Global Recognition & FDA Approval</h1>
+                <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">FDA Approved & Globally Recognized</h1>
                 <div class="blog-content">
-                    <p class="text-xl text-slate-800 font-medium">EECP is not experimental. It is a time-tested, FDA-approved therapy used by world-leading hospitals.</p>
-                    <p>Patients often ask, "If this is so good, why haven't I heard of it?" The answer often lies in the dominance of surgical interventions in standard hospital protocols. However, the scientific validation for EECP is undeniable.</p>
-                    <h3>Regulatory Approvals</h3>
-                    <ul>
-                        <li><strong>US FDA:</strong> Approved for treatment of Angina Pectoris, Cardiogenic Shock, and Heart Failure.</li>
-                        <li><strong>AHA / ACC:</strong> The American Heart Association and American College of Cardiology include EECP in their guidelines for management of stable angina.</li>
-                        <li><strong>European Society of Cardiology:</strong> Recognized as a valid therapy for refractory angina.</li>
-                    </ul>
-                    <p>Major institutions like the Mayo Clinic, Cleveland Clinic, and Johns Hopkins in the USA have EECP centers. Silver Star Heart Foundation brings this exact same world-class standard of care to Mumbai.</p>
+                    <p class="text-xl text-slate-800 font-medium">EECP is a standard of care in top US hospitals.</p>
+                    <p>It is FDA approved for Angina and Heart Failure. The American Heart Association (AHA) and European Society of Cardiology include it in their guidelines.</p>
+                    <p>Major centers like Mayo Clinic and Cleveland Clinic use it. We bring this world-class therapy to Bhandup.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="py-12 px-6 bg-white overflow-hidden border-t border-slate-100">
+    <section class="py-16 px-6 bg-white overflow-hidden border-t border-slate-100">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="flex-1" data-aos="fade-right">
@@ -400,7 +394,7 @@
         </div>
     </section>
 
-    <section id="book-section" class="py-12 px-6 premium-bg text-white text-center relative overflow-hidden">
+    <section id="book-section" class="py-16 px-6 premium-bg text-white text-center relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10" data-aos="zoom-in">
             <h2 class="text-3xl md:text-5xl font-bold mb-6">Visit Silver Star Heart Foundation</h2>
             <p class="text-slate-400 mb-12 text-lg">
