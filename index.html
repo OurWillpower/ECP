@@ -50,14 +50,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* Silver Text Glow Effect */
-        .silver-text {
-            background: linear-gradient(to right, #ffffff, #cbd5e1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(255,255,255,0.3);
-        }
-
         /* Premium Dark Green Textured Background */
         .premium-green-bg {
             background: linear-gradient(135deg, #0a3d26 0%, #062c1b 100%);
@@ -67,7 +59,7 @@
 
         .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
-        /* Floating Social Bar - Mobile Optimized */
+        /* Floating Social Bar - REDUCED SIZES */
         .social-floater {
             position: fixed;
             right: 15px;
@@ -75,43 +67,43 @@
             z-index: 100000; 
             display: flex;
             flex-direction: column-reverse;
-            gap: 12px;
+            gap: 10px; /* Reduced gap */
             align-items: center;
         }
         
         .social-btn {
-            width: 40px; 
-            height: 40px;
+            width: 35px; /* Reduced Mobile Size */
+            height: 35px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem; /* Smaller icon font */
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             cursor: pointer;
             backdrop-filter: blur(5px);
         }
 
-        /* Desktop sizes for social icons */
+        /* Desktop sizes for social icons - ALSO REDUCED */
         @media (min-width: 768px) {
-            .social-floater { right: 30px; bottom: 40px; gap: 15px; }
-            .social-btn { width: 50px; height: 50px; font-size: 1.5rem; }
+            .social-floater { right: 30px; bottom: 40px; gap: 12px; }
+            .social-btn { width: 45px; height: 45px; font-size: 1.3rem; }
         }
         
         .social-btn:hover { transform: scale(1.1); }
 
-        /* Simmering WhatsApp */
+        /* Simmering WhatsApp - Slightly Reduced */
         .whatsapp-simmer {
-            width: 50px; /* Adjusted size */
-            height: 50px;
+            width: 45px; 
+            height: 45px;
             background: #25D366;
-            font-size: 26px;
+            font-size: 24px;
             animation: simmer 2s infinite;
         }
         @media (min-width: 768px) {
-             .whatsapp-simmer { width: 60px; height: 60px; font-size: 30px; }
+             .whatsapp-simmer { width: 55px; height: 55px; font-size: 28px; }
         }
 
         /* Founder Box Simmer */
@@ -126,7 +118,7 @@
             background-position: center;
         }
         .hero-overlay {
-            /* Strong White Overlay for Readability */
+            /* Strong White Overlay */
             background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.6) 100%);
         }
 
@@ -152,12 +144,12 @@
             transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
             max-height: 0;
             opacity: 0;
-            overflow-y: auto; /* Allow scrolling if menu is long */
-            background: #0a3d26; /* Matches Header Green */
+            overflow: hidden;
+            background: #0a3d26;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         #mobile-menu.open {
-            max-height: 90vh;
+            max-height: 100vh;
             opacity: 1;
         }
 
@@ -200,7 +192,7 @@
         <a href="https://wa.me/917039196489?text=I%20am%20interested%20in%20EECP%20Treatment" target="_blank" class="social-btn whatsapp-simmer">
             <i class="ri-whatsapp-line"></i>
         </a>
-        <a href="#" class="social-btn bg-[#0077b5]"><i class="ri-linkedin-fill"></i></a>
+        <a href="#" class="social-btn bg-[#FF0000]"><i class="ri-youtube-fill"></i></a> <a href="#" class="social-btn bg-[#0077b5]"><i class="ri-linkedin-fill"></i></a>
         <a href="#" class="social-btn bg-gradient-to-tr from-yellow-400 to-purple-600"><i class="ri-instagram-line"></i></a>
         <a href="#" class="social-btn bg-[#1877F2]"><i class="ri-facebook-fill"></i></a>
     </div>
@@ -467,6 +459,13 @@
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">Enhanced External Counterpulsation (EECP) is a non-invasive treatment that acts as a "Natural Bypass" for your heart.</p>
                 <p>Unlike Bypass surgery (which uses veins from your leg) or Angioplasty (which uses metal stents), EECP uses your body's own natural ability to heal. It works by increasing the flow of blood to your heart muscle, encouraging the formation of new, small blood vessels (collaterals) around blocked arteries.</p>
+                <h3>The Mechanism</h3>
+                <p>Think of it as a "second heart" pumping for you. You lie on a bed, and cuffs are wrapped around your legs. These cuffs inflate and deflate in perfect rhythm with your heartbeat.</p>
+                <ul>
+                    <li><strong>During Relaxation (Diastole):</strong> The cuffs inflate, pushing oxygen-rich blood back to your heart.</li>
+                    <li><strong>During Pumping (Systole):</strong> The cuffs deflate instantly, making it easier for your heart to pump blood to the rest of the body.</li>
+                </ul>
+                <p>This process reduces the workload on your heart while feeding it more oxygen than it could get on its own.</p>
             </div>
         </div>
         <footer class="premium-green-bg text-green-100 py-16 px-6 border-t border-white/10 text-center">
@@ -499,6 +498,12 @@
             <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">The Science Behind the Cure</h1>
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">EECP is not magic; it is pure physiology. It works on the principle of Angiogenesis and Hemodynamics.</p>
+                <h3>Key Physiological Changes</h3>
+                <ul>
+                    <li><strong>Shear Stress:</strong> The increased blood flow velocity creates "shear stress" on the artery walls. This stimulates the release of Nitric Oxide (NO).</li>
+                    <li><strong>Nitric Oxide Release:</strong> NO is a powerful vasodilator. It helps open up dormant blood vessels and makes arteries more elastic.</li>
+                    <li><strong>Collateral Recruitment:</strong> High pressure opens up tiny "backup" vessels that were previously closed, creating a natural bypass around the blockage.</li>
+                </ul>
                 <p>Clinical studies have shown that 80-90% of patients experience a significant reduction in angina (chest pain) and an improvement in exercise tolerance that can last for years.</p>
             </div>
         </div>
@@ -532,6 +537,12 @@
             <h1 class="text-3xl md:text-5xl font-bold text-brand-navy mb-8 leading-tight">FDA Approval & Global Recognition</h1>
             <div class="info-content">
                 <p class="text-xl text-slate-800 font-medium">EECP is a globally recognized, FDA-cleared therapy used in leading heart institutes worldwide.</p>
+                <h3>Regulatory Status</h3>
+                <ul>
+                    <li><strong>US FDA:</strong> In 1995, the US Food and Drug Administration cleared EECP for the treatment of Angina Pectoris. In 2002, it was cleared for Heart Failure.</li>
+                    <li><strong>American Heart Association (AHA):</strong> EECP is included in the AHA/ACC guidelines for the management of patients with stable angina.</li>
+                    <li><strong>European Society of Cardiology (ESC):</strong> The ESC guidelines recommend EECP for refractory angina.</li>
+                </ul>
                 <p>Top hospitals like the <strong>Mayo Clinic</strong>, <strong>Cleveland Clinic</strong>, and <strong>Johns Hopkins</strong> in the USA have dedicated EECP centers. Silver Star Heart Foundation is proud to bring this gold-standard therapy to you.</p>
             </div>
         </div>
