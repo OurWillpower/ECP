@@ -59,7 +59,7 @@
 
         .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
-        /* Floating Social Bar - Mobile Optimized */
+        /* Floating Social Bar */
         .social-floater {
             position: fixed;
             right: 15px;
@@ -86,7 +86,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Desktop sizes for social icons */
         @media (min-width: 768px) {
             .social-floater { right: 30px; bottom: 40px; gap: 15px; }
             .social-btn { width: 50px; height: 50px; font-size: 1.5rem; }
@@ -96,7 +95,7 @@
 
         /* Simmering WhatsApp */
         .whatsapp-simmer {
-            width: 50px; /* Adjusted size */
+            width: 50px;
             height: 50px;
             background: #25D366;
             font-size: 26px;
@@ -217,6 +216,7 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-green-100">
                 <a href="#" class="hover:text-white transition-colors">Home</a>
                 <a href="#about" class="hover:text-white transition-colors">About Us</a>
+                <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
                 
                 <div class="relative dropdown group h-full py-4 cursor-pointer">
                     <span class="group-hover:text-white transition-colors flex items-center gap-1">Services <i class="ri-arrow-down-s-line"></i></span>
@@ -247,6 +247,7 @@
             <div class="px-6 py-6 flex flex-col gap-4 text-white text-sm">
                 <a href="#" onclick="toggleMobileMenu()" class="text-base font-bold">Home</a>
                 <a href="#about" onclick="toggleMobileMenu()" class="text-base font-bold">About Us</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="text-base font-bold">Gallery</a>
                 
                 <div class="font-bold text-green-300 mt-2 uppercase tracking-widest text-xs">Our Services</div>
                 <button onclick="scrollToService('service-eecp'); toggleMobileMenu()" class="text-left pl-4 py-1">EECP Treatment</button>
@@ -265,7 +266,6 @@
     <header id="hero-slider" class="hero-bg relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-36 md:pt-32 flex flex-col justify-center h-full text-center md:text-left">
-            
             <div>
                 <span class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-brand-green-dark/10 text-brand-green-dark text-xs font-bold mb-6 md:mb-8 border border-brand-green-dark/20 backdrop-blur-md">
                     <i class="ri-verified-badge-fill text-brand-green-dark"></i> Under the Care of Dr. Neelam S. Pingle
@@ -377,6 +377,49 @@
                         <button onclick="bookService('Ayurvedic Therapy')" class="block w-full bg-brand-green-dark text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-brand-green-light transition-colors shadow-lg">Book Consultation</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-navy mb-3">Our Gallery & Certifications</h2>
+                <p class="text-slate-600">A glimpse into our world-class facility and patient success stories.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Clinic Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold tracking-wider">State-of-the-Art</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Patient Care" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold tracking-wider">Patient Care</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a092dd14?q=80&w=2070&auto=format&fit=crop" alt="Waiting Area" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold tracking-wider">Comfort</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-48 md:h-64">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1974&auto=format&fit=crop" alt="Medical Team" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold tracking-wider">Expert Team</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+                <i class="ri-medal-line text-5xl text-brand-gold mb-4 block"></i>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Accreditations & Certifications</h3>
+                <p class="text-slate-500 mb-6">We are committed to maintaining the highest standards of medical excellence.</p>
+                <span class="inline-block bg-slate-100 text-slate-500 px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
             </div>
         </div>
     </section>
@@ -673,6 +716,7 @@
         updateSlide();
         setInterval(updateSlide, 5000);
 
+        // Page Logic
         function openPage(id) {
             document.getElementById(id).classList.add('active');
             document.body.style.overflow = 'hidden'; 
@@ -682,22 +726,28 @@
             document.body.style.overflow = 'auto'; 
         }
 
+        // SCROLL TO SERVICE WITH HIGHLIGHT
         function scrollToService(id) {
             const element = document.getElementById(id);
             if(element) {
+                // Scroll
                 element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Highlight
                 element.classList.add('highlight-card');
+                // Remove highlight after animation (2s)
                 setTimeout(() => {
                     element.classList.remove('highlight-card');
                 }, 2000);
             }
         }
 
+        // SCROLL AND SELECT SERVICE
         function bookService(serviceName) {
             document.getElementById('book-section').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('p_treatment').value = serviceName;
         }
 
+        // SMART WHATSAPP FORM LOGIC
         function sendToWhatsapp(e) {
             e.preventDefault();
             let name = document.getElementById('p_name').value;
@@ -712,6 +762,7 @@
             window.open(`https://wa.me/917039196489?text=${message}`, '_blank');
         }
 
+        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('open');
